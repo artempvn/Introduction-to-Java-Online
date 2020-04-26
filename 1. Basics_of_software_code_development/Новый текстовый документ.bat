@@ -1,3 +1,3 @@
-javac -d ./classes ./source/com/artempvn/linear/*
-java -classpath ./classes com.artempvn.linear.Task_6
+javac -d ./classes ./source/com/artempvn/cycles/*
+java -classpath ./classes com.artempvn.cycles.Task_4
 Pause
