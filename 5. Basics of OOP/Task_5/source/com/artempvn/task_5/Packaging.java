@@ -1,3 +1,4 @@
+package com.artempvn.task_5;
 enum Packaging {
 p1("Пленка"),	p2("Ткань"),	p3("Бумага"),	p4("Корзина"),	p5("Лента");
 
