@@ -1,4 +1,4 @@
-//Найти max{min(a, b), min(c, d)}.
+п»ї//РќР°Р№С‚Рё max{min(a, b), min(c, d)}.
 package com.artempvn.m_2_branching;
 import java.util.Scanner;
 public class Task_2 {
