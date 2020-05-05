@@ -1,5 +1,5 @@
-//Создать объект класса Текстовый файл, используя классы Файл, Директория. Методы: создать, переименовать, 
-//вывести на консоль содержимое, дополнить, удалить.
+п»ї//вЂ”РѕР·РґР°С‚СЊ РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° вЂњРµРєСЃС‚РѕРІС‹Р№ С„Р°Р№Р», РёСЃРїРѕР»СЊР·СѓВ¤ РєР»Р°СЃСЃС‹ вЂР°Р№Р», Ж’РёСЂРµРєС‚РѕСЂРёВ¤. С›РµС‚РѕРґС‹: СЃРѕР·РґР°С‚СЊ, РїРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ, 
+//РІС‹РІРµСЃС‚Рё РЅР° РєРѕРЅСЃРѕР»СЊ СЃРѕРґРµСЂР¶РёРјРѕРµ, РґРѕРїРѕР»РЅРёС‚СЊ, СѓРґР°Р»РёС‚СЊ.
 package com.artempvn.task_1;
 import java.util.*;
 import java.nio.file.*;
@@ -33,8 +33,8 @@ this.name=name;
 try{
 Files.move(path, path.resolveSibling(name),StandardCopyOption.REPLACE_EXISTING);
 path=Paths.get(dir.getPath()+"\\"+name);	
-System.out.println("Файл переименован");
-} catch (Exception ex){System.err.println("Файл не найден");};
+System.out.println("вЂР°Р№Р» РїРµСЂРµРёРјРµРЅРѕРІР°РЅ");
+} catch (Exception ex){System.err.println("вЂР°Р№Р» РЅРµ РЅР°Р№РґРµРЅ");};
 
 }
 
@@ -44,7 +44,7 @@ List<String> l=Files.readAllLines(path);
 for (String s:l){
 	System.out.println(s);
 }
-	} catch (Exception ex) {System.err.println("Файл не найден");}
+	} catch (Exception ex) {System.err.println("вЂР°Р№Р» РЅРµ РЅР°Р№РґРµРЅ");}
 }
 
 
@@ -54,14 +54,14 @@ BufferedWriter writer=Files.newBufferedWriter(path,StandardOpenOption.APPEND);
 writer.write(s);
 writer.newLine();
 writer.close();
-	} catch (Exception ex) {System.err.println("Файл не найден");}
+	} catch (Exception ex) {System.err.println("вЂР°Р№Р» РЅРµ РЅР°Р№РґРµРЅ");}
 }
 
 public void delete (){
 try{
 Files.delete(path);	
-System.out.println("Файл удален");
-} catch (Exception ex){	System.err.println("Файл не найден");};
+System.out.println("вЂР°Р№Р» СѓРґР°Р»РµРЅ");
+} catch (Exception ex){	System.err.println("вЂР°Р№Р» РЅРµ РЅР°Р№РґРµРЅ");};
 
 }
 

@@ -1,5 +1,5 @@
-//Создать класс Payment с внутренним классом, с помощью объектов которого можно сформировать покупку из 
-//нескольких товаров.
+п»ї//вЂ”РѕР·РґР°С‚СЊ РєР»Р°СЃСЃ Payment СЃ РІРЅСѓС‚СЂРµРЅРЅРёРј РєР»Р°СЃСЃРѕРј, СЃ РїРѕРјРѕС‰СЊСЋ РѕР±СЉРµРєС‚РѕРІ РєРѕС‚РѕСЂРѕРіРѕ РјРѕР¶РЅРѕ СЃС„РѕСЂРјРёСЂРѕРІР°С‚СЊ РїРѕРєСѓРїРєСѓ РёР· 
+//РЅРµСЃРєРѕР»СЊРєРёС… С‚РѕРІР°СЂРѕРІ.
 package com.artempvn.task_2;
 import java.util.*;
 import java.nio.file.*;
@@ -37,10 +37,10 @@ public void delete (int id){
 public void print(){
 	double sum=0;
 for(Item i:items){
-	System.out.printf("id: %d; товар: %s; цена: %.2f\n", i.getId(),i.getName(),i.getCost());
+	System.out.printf("id: %d; С‚РѕРІР°СЂ: %s; С†РµРЅР°: %.2f\n", i.getId(),i.getName(),i.getCost());
 	sum+=i.getCost();
 	}
-System.out.printf("Общая стоимость: %.2f\n", sum);	
+System.out.printf("СњР±С‰Р°В¤ СЃС‚РѕРёРјРѕСЃС‚СЊ: %.2f\n", sum);	
 }
 
 class Item{
@@ -68,11 +68,11 @@ public double getCost(){
 
 public static void main (String [] args) {
 Payment p1=new Payment(1);	
-Payment.Item i1=p1.new Item(1,"гречка",1.49d);
-Payment.Item i2=p1.new Item(2,"гранат",6.55d);
-Payment.Item i3=p1.new Item(3,"сок",1.99d);
-Payment.Item i4=p1.new Item(4,"макароны",2.01d);
-Payment.Item i5=p1.new Item(5,"йогурт",1.88d);
+Payment.Item i1=p1.new Item(1,"РіСЂРµС‡РєР°",1.49d);
+Payment.Item i2=p1.new Item(2,"РіСЂР°РЅР°С‚",6.55d);
+Payment.Item i3=p1.new Item(3,"СЃРѕРє",1.99d);
+Payment.Item i4=p1.new Item(4,"РјР°РєР°СЂРѕРЅС‹",2.01d);
+Payment.Item i5=p1.new Item(5,"Р№РѕРіСѓСЂС‚",1.88d);
 p1.print();
 }
 }

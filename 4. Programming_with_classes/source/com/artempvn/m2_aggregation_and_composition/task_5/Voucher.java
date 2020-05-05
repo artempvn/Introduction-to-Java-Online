@@ -1,4 +1,4 @@
-package com.artempvn.m2_aggregation_and_composition.task_5;
+﻿package com.artempvn.m2_aggregation_and_composition.task_5;
 class  Voucher { 
 private int id;
 private String type;

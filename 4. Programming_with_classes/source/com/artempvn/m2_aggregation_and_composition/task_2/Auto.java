@@ -1,5 +1,5 @@
-//Создать объект класса Автомобиль, используя классы Колесо, Двигатель. Методы: ехать, заправляться, 
-//менять колесо, вывести на консоль марку автомобиля. 
+п»ї//РЎРѕР·РґР°С‚СЊ РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° РђРІС‚РѕРјРѕР±РёР»СЊ, РёСЃРїРѕР»СЊР·СѓСЏ РєР»Р°СЃСЃС‹ РљРѕР»РµСЃРѕ, Р”РІРёРіР°С‚РµР»СЊ. РњРµС‚РѕРґС‹: РµС…Р°С‚СЊ, Р·Р°РїСЂР°РІР»СЏС‚СЊСЃСЏ, 
+//РјРµРЅСЏС‚СЊ РєРѕР»РµСЃРѕ, РІС‹РІРµСЃС‚Рё РЅР° РєРѕРЅСЃРѕР»СЊ РјР°СЂРєСѓ Р°РІС‚РѕРјРѕР±РёР»СЏ. 
 package com.artempvn.m2_aggregation_and_composition.task_2;
 import java.util.*;
 import static java.lang.Math.*;
@@ -25,10 +25,10 @@ public void drive (double mile){
 	if (fuelTank-8*mile/100<0){
 		mile=(fuelTank/8)*100;
 		fuelTank=0;
-System.out.printf("Закончилось топливо\n");		
+System.out.printf("Р—Р°РєРѕРЅС‡РёР»РѕСЃСЊ С‚РѕРїР»РёРІРѕ\n");		
 	} else fuelTank-=8*mile/100;
 mileage+=mile;	
-System.out.printf("Автомобиль проехал %.1f км\n",mile);	
+System.out.printf("РђРІС‚РѕРјРѕР±РёР»СЊ РїСЂРѕРµС…Р°Р» %.1f РєРј\n",mile);	
 	 
 	
 }
@@ -37,26 +37,26 @@ public void addFuel (double fuel){
 	double prev=fuelTank;
 	fuelTank+=fuel;
 	if (fuelTank>80) fuelTank=80;
-	System.out.printf("Автомобиль заправлен на %.1f л\n",(fuelTank-prev));
+	System.out.printf("РђРІС‚РѕРјРѕР±РёР»СЊ Р·Р°РїСЂР°РІР»РµРЅ РЅР° %.1f Р»\n",(fuelTank-prev));
 }
 
 public void print(){
-System.out.println("Марка: "+model);
-System.out.println("Двигатель: "+engine.getCapacity()+" "+engine);
-System.out.println("Колеса: ");
+System.out.println("РњР°СЂРєР°: "+model);
+System.out.println("Р”РІРёРіР°С‚РµР»СЊ: "+engine.getCapacity()+" "+engine);
+System.out.println("РљРѕР»РµСЃР°: ");
 for (int i=0;i<wheels.length;i++){
 System.out.print(wheels[i].getTyreSize()+" "+wheels[i]+" ");
 }	
 System.out.println();
-System.out.println("Пробег: "+mileage);	
-System.out.println("Уровень топлива: "+fuelTank);	
+System.out.println("РџСЂРѕР±РµРі: "+mileage);	
+System.out.println("РЈСЂРѕРІРµРЅСЊ С‚РѕРїР»РёРІР°: "+fuelTank);	
 }
 public void printModel(){
-System.out.println("Марка: "+model);	
+System.out.println("РњР°СЂРєР°: "+model);	
 }
 
 public void changeWheel (int wheel, Wheel newWheel){
-System.out.println("Замена колеса "+wheels[wheel].getTyreSize()+" "+wheels[wheel]+" на колесо "+newWheel.getTyreSize()+" "+newWheel);
+System.out.println("Р—Р°РјРµРЅР° РєРѕР»РµСЃР° "+wheels[wheel].getTyreSize()+" "+wheels[wheel]+" РЅР° РєРѕР»РµСЃРѕ "+newWheel.getTyreSize()+" "+newWheel);
 wheels[wheel]=newWheel;	
 }
 

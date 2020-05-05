@@ -1,4 +1,4 @@
-package com.artempvn.task_3.server;
+п»їpackage com.artempvn.task_3.server;
 import java.util.*;
 import java.io.*;
 import java.nio.file.*;
@@ -15,7 +15,7 @@ serverSock=new ServerSocket(5007);
 	Socket sock=serverSock.accept();
 BufferedReader reader=new BufferedReader(new InputStreamReader(sock.getInputStream()));
 ArchiveServer.write("cases",reader.readLine());
-System.out.println("Обновлен список дел");
+System.out.println("СњР±РЅРѕРІР»РµРЅ СЃРїРёСЃРѕРє РґРµР»");
 reader.close();
 	sock.close();
 	}

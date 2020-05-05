@@ -1,4 +1,4 @@
-package com.artempvn.task_3.client;
+﻿package com.artempvn.task_3.client;
 class Case implements Comparable<Case>{
 private String name;
 private String secondName;

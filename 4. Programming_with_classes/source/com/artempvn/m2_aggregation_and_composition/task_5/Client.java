@@ -1,6 +1,6 @@
-//’уристические путевки. ‘формировать набор предложений клиенту по выбору туристической путевки 
-//различного типа (отдых, экскурсии, лечение, шопинг, круиз и т. д.) длЯ оптимального выбора. “читывать 
-//возможность выбора транспорта, питаниЯ и числа дней. ђеализовать выбор и сортировку путевок.
+п»ї//РўСѓСЂРёСЃС‚РёС‡РµСЃРєРёРµ РїСѓС‚РµРІРєРё. РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ РЅР°Р±РѕСЂ РїСЂРµРґР»РѕР¶РµРЅРёР№ РєР»РёРµРЅС‚Сѓ РїРѕ РІС‹Р±РѕСЂСѓ С‚СѓСЂРёСЃС‚РёС‡РµСЃРєРѕР№ РїСѓС‚РµРІРєРё 
+//СЂР°Р·Р»РёС‡РЅРѕРіРѕ С‚РёРїР° (РѕС‚РґС‹С…, СЌРєСЃРєСѓСЂСЃРёРё, Р»РµС‡РµРЅРёРµ, С€РѕРїРёРЅРі, РєСЂСѓРёР· Рё С‚. Рґ.) РґР»СЏ РѕРїС‚РёРјР°Р»СЊРЅРѕРіРѕ РІС‹Р±РѕСЂР°. РЈС‡РёС‚С‹РІР°С‚СЊ 
+//РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РІС‹Р±РѕСЂР° С‚СЂР°РЅСЃРїРѕСЂС‚Р°, РїРёС‚Р°РЅРёСЏ Рё С‡РёСЃР»Р° РґРЅРµР№. Р РµР°Р»РёР·РѕРІР°С‚СЊ РІС‹Р±РѕСЂ Рё СЃРѕСЂС‚РёСЂРѕРІРєСѓ РїСѓС‚РµРІРѕРє.
 package com.artempvn.m2_aggregation_and_composition.task_5;
 import java.util.*;
 import static java.lang.Math.*;
@@ -28,8 +28,8 @@ class IdCompare implements Comparator<Voucher>{
 		return new Integer(one.getId()).compareTo(two.getId());
 	}
 }
-public  void function (ArrayList<Voucher> v){ //Сортировка по id
-System.out.println("Сортировка по id путевки");
+public  void function (ArrayList<Voucher> v){ //вЂ”РѕСЂС‚РёСЂРѕРІРєР° РїРѕ id
+System.out.println("вЂ”РѕСЂС‚РёСЂРѕРІРєР° РїРѕ id РїСѓС‚РµРІРєРё");
 IdCompare idcom=new IdCompare();
 Collections.sort(v,idcom);	
 }
@@ -38,8 +38,8 @@ class TypeCompare implements Comparator<Voucher>{
 		return one.getType().compareTo(two.getType());
 	}
 }
-public  void function1 (ArrayList<Voucher> v){ //Сортировка по типу
-System.out.println("Сортировка по типу путевки");
+public  void function1 (ArrayList<Voucher> v){ //вЂ”РѕСЂС‚РёСЂРѕРІРєР° РїРѕ С‚РёРїСѓ
+System.out.println("вЂ”РѕСЂС‚РёСЂРѕРІРєР° РїРѕ С‚РёРїСѓ РїСѓС‚РµРІРєРё");
 TypeCompare typcom=new TypeCompare();
 Collections.sort(v,typcom);	
 }
@@ -48,8 +48,8 @@ class TransportCompare implements Comparator<Voucher>{
 		return one.getTransport().compareTo(two.getTransport());
 	}
 }
-public  void function2 (ArrayList<Voucher> v){ //Сортировка по транспорту
-System.out.println("Сортировка по типу транспорта");
+public  void function2 (ArrayList<Voucher> v){ //вЂ”РѕСЂС‚РёСЂРѕРІРєР° РїРѕ С‚СЂР°РЅСЃРїРѕСЂС‚Сѓ
+System.out.println("вЂ”РѕСЂС‚РёСЂРѕРІРєР° РїРѕ С‚РёРїСѓ С‚СЂР°РЅСЃРїРѕСЂС‚Р°");
 TransportCompare trcom=new TransportCompare();
 Collections.sort(v,trcom);	
 }
@@ -58,8 +58,8 @@ class MealCompare implements Comparator<Voucher>{
 		return one.getMeal().compareTo(two.getMeal());
 	}
 }
-public  void function3 (ArrayList<Voucher> v){ //Сортировка по питанию
-System.out.println("Сортировка по типу питания");
+public  void function3 (ArrayList<Voucher> v){ //вЂ”РѕСЂС‚РёСЂРѕРІРєР° РїРѕ РїРёС‚Р°РЅРёСЋ
+System.out.println("вЂ”РѕСЂС‚РёСЂРѕРІРєР° РїРѕ С‚РёРїСѓ РїРёС‚Р°РЅРёВ¤");
 MealCompare mlcom=new MealCompare();
 Collections.sort(v,mlcom);	
 }
@@ -68,8 +68,8 @@ class DaysCompare implements Comparator<Voucher>{
 		return new Integer(one.getDays()).compareTo(two.getDays());
 	}
 }
-public  void function4 (ArrayList<Voucher> v){ //Сортировка по дням
-System.out.println("Сортировка по количеству дней");
+public  void function4 (ArrayList<Voucher> v){ //вЂ”РѕСЂС‚РёСЂРѕРІРєР° РїРѕ РґРЅВ¤Рј
+System.out.println("вЂ”РѕСЂС‚РёСЂРѕРІРєР° РїРѕ РєРѕР»РёС‡РµСЃС‚РІСѓ РґРЅРµР№");
 DaysCompare dcom=new DaysCompare();
 Collections.sort(v,dcom);	
 }
@@ -78,53 +78,53 @@ public void search(){
 	Scanner in=new Scanner(System.in);
 	function1(vouchers);
 	print(vouchers);
-	System.out.printf("Введите тип путевки: \n");
+	System.out.printf("В¬РІРµРґРёС‚Рµ С‚РёРї РїСѓС‚РµРІРєРё: \n");
 	String t=in.next();
 	for(Voucher v:vouchers){
 	if (!v.getType().equals(t)) chosenVouchers.remove(v);
 	}
 	if (chosenVouchers.size()==0){
-		System.out.println("Путевки не найдены");
+		System.out.println("С•СѓС‚РµРІРєРё РЅРµ РЅР°Р№РґРµРЅС‹");
 		return;
 	}
 	function2(chosenVouchers);
 	print(chosenVouchers);
 	if (vouchers.size()==1)return;
-	System.out.printf("Введите тип транспорта: \n");
+	System.out.printf("В¬РІРµРґРёС‚Рµ С‚РёРї С‚СЂР°РЅСЃРїРѕСЂС‚Р°: \n");
 	String t2=in.next();
 	vouchers=new ArrayList<Voucher>();
 	for(Voucher v:chosenVouchers){
 	if (v.getTransport().equals(t2))vouchers.add(v);
 	}
 	if (vouchers.size()==0){
-		System.out.println("Путевки не найдены");
+		System.out.println("С•СѓС‚РµРІРєРё РЅРµ РЅР°Р№РґРµРЅС‹");
 		return;
 	}
 
 	function3(vouchers);
 	print(vouchers);
 		if (vouchers.size()==1)return;
-	System.out.printf("Введите тип питания: \n");
+	System.out.printf("В¬РІРµРґРёС‚Рµ С‚РёРї РїРёС‚Р°РЅРёВ¤: \n");
 	t=in.next();
 	chosenVouchers=new ArrayList<Voucher>();
 	for(Voucher v:vouchers){
 	if (v.getMeal().equals(t))chosenVouchers.add(v);
 	}
 	if (chosenVouchers.size()==0){
-		System.out.println("Путевки не найдены");
+		System.out.println("С•СѓС‚РµРІРєРё РЅРµ РЅР°Р№РґРµРЅС‹");
 		return;
 	}
 	function4(chosenVouchers);
 	print(chosenVouchers);
 	if (vouchers.size()==1)return;
-	System.out.printf("Введите число дней: \n");
+	System.out.printf("В¬РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РґРЅРµР№: \n");
 	t=in.next();
 	vouchers=new ArrayList<Voucher>();
 	for(Voucher v:chosenVouchers){
 	if (v.getDays()==(Integer.parseInt(t))) vouchers.add(v);
 	}
 	if (vouchers.size()==0){
-		System.out.println("Путевки не найдены");
+		System.out.println("С•СѓС‚РµРІРєРё РЅРµ РЅР°Р№РґРµРЅС‹");
 		return;
 	}
 	print(vouchers);
@@ -133,24 +133,24 @@ public void search(){
 
 public void print(ArrayList<Voucher> vo){
 	for(Voucher v:vo){
-	System.out.printf("id: %s; Тип путевки: %s; Транспорт: %s; Питание: %s; Число дней: %d; \n",v.getId(),v.getType(),v.getTransport(),v.getMeal(),v.getDays());	
+	System.out.printf("id: %s; вЂњРёРї РїСѓС‚РµРІРєРё: %s; вЂњСЂР°РЅСЃРїРѕСЂС‚: %s; С•РёС‚Р°РЅРёРµ: %s; вЂћРёСЃР»Рѕ РґРЅРµР№: %d; \n",v.getId(),v.getType(),v.getTransport(),v.getMeal(),v.getDays());	
 	}
 }
 
 
 public static void main (String [] args) {
-Voucher v1=new Voucher(1,"отдых","поезд","завтраки",5);
-Voucher v2=new Voucher(2,"отдых","самолет","полное",9);
-Voucher v3=new Voucher(3,"экскурсии","поезд","завтраки",4);
-Voucher v4=new Voucher(4,"экскурсии","автобус","нет",6);
-Voucher v5=new Voucher(5,"лечение","автобус","полное",14);
-Voucher v6=new Voucher(6,"лечение","самолет","обеды",13);
-Voucher v7=new Voucher(7,"шопинг","поезд","нет",2);
-Voucher v8=new Voucher(8,"шопинг","автобус","нет",3);
-Voucher v9=new Voucher(9,"круиз","лайнер","полное",10);
-Voucher v10=new Voucher(10,"круиз","лайнер","полное",8);
-Voucher v11=new Voucher(11,"отдых","самолет","обеды",13);
-Client a=new Client("Клиент 1",v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11);
+Voucher v1=new Voucher(1,"РѕС‚РґС‹С…","РїРѕРµР·Рґ","Р·Р°РІС‚СЂР°РєРё",5);
+Voucher v2=new Voucher(2,"РѕС‚РґС‹С…","СЃР°РјРѕР»РµС‚","РїРѕР»РЅРѕРµ",9);
+Voucher v3=new Voucher(3,"СЌРєСЃРєСѓСЂСЃРёРё","РїРѕРµР·Рґ","Р·Р°РІС‚СЂР°РєРё",4);
+Voucher v4=new Voucher(4,"СЌРєСЃРєСѓСЂСЃРёРё","Р°РІС‚РѕР±СѓСЃ","РЅРµС‚",6);
+Voucher v5=new Voucher(5,"Р»РµС‡РµРЅРёРµ","Р°РІС‚РѕР±СѓСЃ","РїРѕР»РЅРѕРµ",14);
+Voucher v6=new Voucher(6,"Р»РµС‡РµРЅРёРµ","СЃР°РјРѕР»РµС‚","РѕР±РµРґС‹",13);
+Voucher v7=new Voucher(7,"С€РѕРїРёРЅРі","РїРѕРµР·Рґ","РЅРµС‚",2);
+Voucher v8=new Voucher(8,"С€РѕРїРёРЅРі","Р°РІС‚РѕР±СѓСЃ","РЅРµС‚",3);
+Voucher v9=new Voucher(9,"РєСЂСѓРёР·","Р»Р°Р№РЅРµСЂ","РїРѕР»РЅРѕРµ",10);
+Voucher v10=new Voucher(10,"РєСЂСѓРёР·","Р»Р°Р№РЅРµСЂ","РїРѕР»РЅРѕРµ",8);
+Voucher v11=new Voucher(11,"РѕС‚РґС‹С…","СЃР°РјРѕР»РµС‚","РѕР±РµРґС‹",13);
+Client a=new Client("В Р»РёРµРЅС‚ 1",v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11);
 a.search();
 
 }

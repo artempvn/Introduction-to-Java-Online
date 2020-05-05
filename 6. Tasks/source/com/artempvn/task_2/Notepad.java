@@ -1,18 +1,18 @@
-/*
-*Блокнот.  Разработать консольное приложение, работающее с Заметками
-*в Блокноте. Каждая Заметка это: Заметка (тема, дата создания, e-mail, сообщение). 
-*Общие пояснения к практическому заданию.
-•  В  начале  работы  приложения  данные  должны  считываться  из  файла,  в  конце
-работы – сохраняться в файл.
-•  У  пользователя  должна  быть  возможность  найти  запись  по  любому  параметру 
-*или  по  группе  параметров  (группу  параметров  можно  определить 
-*самостоятельно),  получить  требуемые  записи  в  отсортированном  виде,  найти 
-*записи,  текстовое  поле  которой  содержит  определенное  слово,  а  также 
-*добавить новую запись.
-•  Особое  условие:  поиск,  сравнение  и  валидацию  вводимой  информации 
-*осуществлять с использованием регулярных выражений.
-•  Особое  условие:  проверку  введенной  информации  на  валидность  должен 
-*осуществлять код, непосредственно добавляющий информацию.
+п»ї/*
+*Р‘Р»РѕРєРЅРѕС‚.  Р Р°Р·СЂР°Р±РѕС‚Р°С‚СЊ РєРѕРЅСЃРѕР»СЊРЅРѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ, СЂР°Р±РѕС‚Р°СЋС‰РµРµ СЃ Р—Р°РјРµС‚РєР°РјРё
+*РІ Р‘Р»РѕРєРЅРѕС‚Рµ. РљР°Р¶РґР°СЏ Р—Р°РјРµС‚РєР° СЌС‚Рѕ: Р—Р°РјРµС‚РєР° (С‚РµРјР°, РґР°С‚Р° СЃРѕР·РґР°РЅРёСЏ, e-mail, СЃРѕРѕР±С‰РµРЅРёРµ). 
+*РћР±С‰РёРµ РїРѕСЏСЃРЅРµРЅРёСЏ Рє РїСЂР°РєС‚РёС‡РµСЃРєРѕРјСѓ Р·Р°РґР°РЅРёСЋ.
+вЂў  Р’  РЅР°С‡Р°Р»Рµ  СЂР°Р±РѕС‚С‹  РїСЂРёР»РѕР¶РµРЅРёСЏ  РґР°РЅРЅС‹Рµ  РґРѕР»Р¶РЅС‹  СЃС‡РёС‚С‹РІР°С‚СЊСЃСЏ  РёР·  С„Р°Р№Р»Р°,  РІ  РєРѕРЅС†Рµ
+СЂР°Р±РѕС‚С‹ вЂ“ СЃРѕС…СЂР°РЅСЏС‚СЊСЃСЏ РІ С„Р°Р№Р».
+вЂў  РЈ  РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ  РґРѕР»Р¶РЅР°  Р±С‹С‚СЊ  РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ  РЅР°Р№С‚Рё  Р·Р°РїРёСЃСЊ  РїРѕ  Р»СЋР±РѕРјСѓ  РїР°СЂР°РјРµС‚СЂСѓ 
+*РёР»Рё  РїРѕ  РіСЂСѓРїРїРµ  РїР°СЂР°РјРµС‚СЂРѕРІ  (РіСЂСѓРїРїСѓ  РїР°СЂР°РјРµС‚СЂРѕРІ  РјРѕР¶РЅРѕ  РѕРїСЂРµРґРµР»РёС‚СЊ 
+*СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕ),  РїРѕР»СѓС‡РёС‚СЊ  С‚СЂРµР±СѓРµРјС‹Рµ  Р·Р°РїРёСЃРё  РІ  РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅРѕРј  РІРёРґРµ,  РЅР°Р№С‚Рё 
+*Р·Р°РїРёСЃРё,  С‚РµРєСЃС‚РѕРІРѕРµ  РїРѕР»Рµ  РєРѕС‚РѕСЂРѕР№  СЃРѕРґРµСЂР¶РёС‚  РѕРїСЂРµРґРµР»РµРЅРЅРѕРµ  СЃР»РѕРІРѕ,  Р°  С‚Р°РєР¶Рµ 
+*РґРѕР±Р°РІРёС‚СЊ РЅРѕРІСѓСЋ Р·Р°РїРёСЃСЊ.
+вЂў  РћСЃРѕР±РѕРµ  СѓСЃР»РѕРІРёРµ:  РїРѕРёСЃРє,  СЃСЂР°РІРЅРµРЅРёРµ  Рё  РІР°Р»РёРґР°С†РёСЋ  РІРІРѕРґРёРјРѕР№  РёРЅС„РѕСЂРјР°С†РёРё 
+*РѕСЃСѓС‰РµСЃС‚РІР»СЏС‚СЊ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЂРµРіСѓР»СЏСЂРЅС‹С… РІС‹СЂР°Р¶РµРЅРёР№.
+вЂў  РћСЃРѕР±РѕРµ  СѓСЃР»РѕРІРёРµ:  РїСЂРѕРІРµСЂРєСѓ  РІРІРµРґРµРЅРЅРѕР№  РёРЅС„РѕСЂРјР°С†РёРё  РЅР°  РІР°Р»РёРґРЅРѕСЃС‚СЊ  РґРѕР»Р¶РµРЅ 
+*РѕСЃСѓС‰РµСЃС‚РІР»СЏС‚СЊ РєРѕРґ, РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ РґРѕР±Р°РІР»СЏСЋС‰РёР№ РёРЅС„РѕСЂРјР°С†РёСЋ.
 */
 package com.artempvn.task_2;
 import java.util.*;
@@ -51,7 +51,7 @@ for (String s:l){
 String[] note=s.split("/");
 notesList.add(new Note(note[0],note[1],note[2],note[3]));
 }
-if(l.size()==0) System.out.println("Заметок нет.");
+if(l.size()==0) System.out.println("Р—Р°РјРµС‚РѕРє РЅРµС‚.");
 	} catch (Exception ex) {ex.printStackTrace();}
 }
 
@@ -66,38 +66,38 @@ writer.write(n.getTitle()+"/"+n.getDate()+"/"+n.getEmail()+"/"+n.getMessage());
 writer.newLine();	
 }
 writer.close();
-	} catch (Exception ex) {System.err.println("Файл не найден");}
+	} catch (Exception ex) {System.err.println("Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ");}
 }
 
 public void addNote(){
 clear(); 
-System.out.println("Введите тему");
+System.out.println("Р’РІРµРґРёС‚Рµ С‚РµРјСѓ");
 String title=in.nextLine();
 title=in.nextLine();
-System.out.println("Введите дату создания в формате дд.мм.гггг");
+System.out.println("Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ СЃРѕР·РґР°РЅРёСЏ РІ С„РѕСЂРјР°С‚Рµ РґРґ.РјРј.РіРіРіРі");
 String date="";
 do{
 date=in.nextLine();
 }while (!checkDate(date));
-System.out.println("Введите e-mail");
+System.out.println("Р’РІРµРґРёС‚Рµ e-mail");
 String email="";
 do{
 email=in.nextLine();
 }while(!checkEmail(email));
-System.out.println("Введите сообщение");
+System.out.println("Р’РІРµРґРёС‚Рµ СЃРѕРѕР±С‰РµРЅРёРµ");
 String message=in.nextLine();
 Note n=new Note(title,date,email,message);
 notesList.add(n);
-System.out.printf("Заметка успешна добавлена в блокнот. Введите любой символ для продолжения.\n",title);
+System.out.printf("Р—Р°РјРµС‚РєР° СѓСЃРїРµС€РЅР° РґРѕР±Р°РІР»РµРЅР° РІ Р±Р»РѕРєРЅРѕС‚. Р’РІРµРґРёС‚Рµ Р»СЋР±РѕР№ СЃРёРјРІРѕР» РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ.\n",title);
 String s=in.next();
 mainMenu();
 }
 
 public void mainMenu(){
 clear();
-System.out.println("1.Просмотр заметок");	
-System.out.println("2.Добавить заметку");	
-System.out.println("3.Выйти из приложения");
+System.out.println("1.РџСЂРѕСЃРјРѕС‚СЂ Р·Р°РјРµС‚РѕРє");	
+System.out.println("2.Р”РѕР±Р°РІРёС‚СЊ Р·Р°РјРµС‚РєСѓ");	
+System.out.println("3.Р’С‹Р№С‚Рё РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ");
 String choise=in.next();
 switch(choise){
 	case "1":
@@ -117,13 +117,13 @@ switch(choise){
 
 public void viewMenu(){ 
 clear();
-System.out.println("1.Показать все заметки");	
-System.out.println("2.Поиск заметок по теме");	
-System.out.println("3.Поиск заметок по дате");
-System.out.println("4.Поиск заметок по e-mail");
-System.out.println("5.Поиск заметок по определенному слову");
-System.out.println("6.Поиск заметок по группе параметров");
-System.out.println("0.Вернуться в предыдущее меню");	
+System.out.println("1.РџРѕРєР°Р·Р°С‚СЊ РІСЃРµ Р·Р°РјРµС‚РєРё");	
+System.out.println("2.РџРѕРёСЃРє Р·Р°РјРµС‚РѕРє РїРѕ С‚РµРјРµ");	
+System.out.println("3.РџРѕРёСЃРє Р·Р°РјРµС‚РѕРє РїРѕ РґР°С‚Рµ");
+System.out.println("4.РџРѕРёСЃРє Р·Р°РјРµС‚РѕРє РїРѕ e-mail");
+System.out.println("5.РџРѕРёСЃРє Р·Р°РјРµС‚РѕРє РїРѕ РѕРїСЂРµРґРµР»РµРЅРЅРѕРјСѓ СЃР»РѕРІСѓ");
+System.out.println("6.РџРѕРёСЃРє Р·Р°РјРµС‚РѕРє РїРѕ РіСЂСѓРїРїРµ РїР°СЂР°РјРµС‚СЂРѕРІ");
+System.out.println("0.Р’РµСЂРЅСѓС‚СЊСЃСЏ РІ РїСЂРµРґС‹РґСѓС‰РµРµ РјРµРЅСЋ");	
 String choise=in.next();
 String s="";
 String ss="";
@@ -135,30 +135,30 @@ switch(choise){
 	notesViewer("all","");
 	break;
 	case "2":
-	System.out.println("Введите слово или его часть для поиска темы");
+	System.out.println("Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ РёР»Рё РµРіРѕ С‡Р°СЃС‚СЊ РґР»СЏ РїРѕРёСЃРєР° С‚РµРјС‹");
 	s=in.next();
 	notesViewer("title",s);
 	break;
 	case "3" :
-	System.out.println("Введите дату создания в формате дд.мм.гггг (на месте ненужных цифр поставьте прочерки(-))");
+	System.out.println("Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ СЃРѕР·РґР°РЅРёСЏ РІ С„РѕСЂРјР°С‚Рµ РґРґ.РјРј.РіРіРіРі (РЅР° РјРµСЃС‚Рµ РЅРµРЅСѓР¶РЅС‹С… С†РёС„СЂ РїРѕСЃС‚Р°РІСЊС‚Рµ РїСЂРѕС‡РµСЂРєРё(-))");
 	do{
 	s=in.next();
 	}while(!checkSearchDate(s));
 	notesViewer("date",s);
 	break;
 	case "4":
-	System.out.println("Введите e-mail или его часть");
+	System.out.println("Р’РІРµРґРёС‚Рµ e-mail РёР»Рё РµРіРѕ С‡Р°СЃС‚СЊ");
 	s=in.next();
 	notesViewer("email",s);
 	break;
 	case "5":
-	System.out.println("Введите слово или его часть для поиска заметки");
+	System.out.println("Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ РёР»Рё РµРіРѕ С‡Р°СЃС‚СЊ РґР»СЏ РїРѕРёСЃРєР° Р·Р°РјРµС‚РєРё");
 	s=in.next();
 	notesViewer("message",s);
 	break;
 	case "6":
 	do{
-	System.out.println("Введите номера параметров, перечисленных выше");
+	System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂР° РїР°СЂР°РјРµС‚СЂРѕРІ, РїРµСЂРµС‡РёСЃР»РµРЅРЅС‹С… РІС‹С€Рµ");
 	s=in.next();
 	Pattern ptrn1 = Pattern.compile("[2345]");	
 	Matcher m1 = ptrn1.matcher(s);
@@ -191,12 +191,12 @@ ptrn1 = Pattern.compile(s);
 } 
 if (choise.equals("group")){
 if(searchWord.contains("2")){
-System.out.println("Введите слово или его часть для поиска темы");
+System.out.println("Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ РёР»Рё РµРіРѕ С‡Р°СЃС‚СЊ РґР»СЏ РїРѕРёСЃРєР° С‚РµРјС‹");
 	title=in.next();
 }
 if(searchWord.contains("3")){
 isDate=true;	
-	System.out.println("Введите дату создания в формате дд.мм.гггг (на месте ненужных цифр поставьте прочерки(-))");
+	System.out.println("Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ СЃРѕР·РґР°РЅРёСЏ РІ С„РѕСЂРјР°С‚Рµ РґРґ.РјРј.РіРіРіРі (РЅР° РјРµСЃС‚Рµ РЅРµРЅСѓР¶РЅС‹С… С†РёС„СЂ РїРѕСЃС‚Р°РІСЊС‚Рµ РїСЂРѕС‡РµСЂРєРё(-))");
 	do{
 	date=in.next();
 	}while(!checkSearchDate(date));
@@ -204,11 +204,11 @@ isDate=true;
 ptrn1 = Pattern.compile(s);	
 }	
 if(searchWord.contains("4")){
-	System.out.println("Введите e-mail или его часть");
+	System.out.println("Р’РІРµРґРёС‚Рµ e-mail РёР»Рё РµРіРѕ С‡Р°СЃС‚СЊ");
 	email=in.next();
 }
 if(searchWord.contains("5")){
-	System.out.println("Введите слово или его часть для поиска заметки");
+	System.out.println("Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ РёР»Рё РµРіРѕ С‡Р°СЃС‚СЊ РґР»СЏ РїРѕРёСЃРєР° Р·Р°РјРµС‚РєРё");
 	message=in.next();
 }		
 }
@@ -265,7 +265,7 @@ for(Note n:notesList){
 	}
 }
 if (notesSpList.size()==0){
-System.out.println("Заметок не найдено. Введите любой символ для продолжения.");
+System.out.println("Р—Р°РјРµС‚РѕРє РЅРµ РЅР°Р№РґРµРЅРѕ. Р’РІРµРґРёС‚Рµ Р»СЋР±РѕР№ СЃРёРјРІРѕР» РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ.");
 String s=in.next();
 viewMenu();	
 } else notesViewerMenu();
@@ -273,25 +273,25 @@ viewMenu();
 
 public void notesViewerMenu(){
 System.out.println("----------------");
-System.out.println("Выберите заметку или вернитесь назад(0)");
+System.out.println("Р’С‹Р±РµСЂРёС‚Рµ Р·Р°РјРµС‚РєСѓ РёР»Рё РІРµСЂРЅРёС‚РµСЃСЊ РЅР°Р·Р°Рґ(0)");
 System.out.println("----------------");
-System.out.println("Сортировка:тема(т), дата(д), e-mail(п)");
+System.out.println("РЎРѕСЂС‚РёСЂРѕРІРєР°:С‚РµРјР°(С‚), РґР°С‚Р°(Рґ), e-mail(Рї)");
 String choise="";	
 int choiseInt=0;
 boolean check=false;
 do{
 check=false;	
 choise=in.next();
-if(choise.equals("т")||choise.equals("д")||choise.equals("п")){
+if(choise.equals("С‚")||choise.equals("Рґ")||choise.equals("Рї")){
 check=true;	
 switch(choise){
-case "т":
+case "С‚":
 	Collections.sort(notesList,new TitleCompare());
 	break;
-	case "д":
+	case "Рґ":
 	Collections.sort(notesList,new DateCompare());
 	break;
-	case "п":
+	case "Рї":
 	Collections.sort(notesList,new EmailCompare());
 	break;	
 }
@@ -314,7 +314,7 @@ public void noteViewer(int number){
 Note n=notesSpList.get(number);
 System.out.printf("%s\n%s\n%s\n%s\n",n.getTitle(),n.getDate(),n.getEmail(),n.getMessage());
 System.out.println("--------");
-System.out.println("Введите любой символ для возврата в меню поиска");
+System.out.println("Р’РІРµРґРёС‚Рµ Р»СЋР±РѕР№ СЃРёРјРІРѕР» РґР»СЏ РІРѕР·РІСЂР°С‚Р° РІ РјРµРЅСЋ РїРѕРёСЃРєР°");
 String choise=in.next();
 viewMenu();
 }
@@ -330,7 +330,7 @@ boolean correct=false;
 Pattern ptrn1 = Pattern.compile("(((0[1-9]|[1-2][0-9]|3[0-1])\\.(01|03|05|07|08|10|12))|((0[1-9]|[1-2][0-9]|30)\\.(04|06|09|11))|((0[1-9]|[1-2][0-9])\\.02))(\\.20[0-3][0-9])");
 Matcher m1 = ptrn1.matcher(date);
 if (m1.matches()) correct=true;
-else System.err.println("Некорректно введена дата, введите еще раз");
+else System.err.println("РќРµРєРѕСЂСЂРµРєС‚РЅРѕ РІРІРµРґРµРЅР° РґР°С‚Р°, РІРІРµРґРёС‚Рµ РµС‰Рµ СЂР°Р·");
 return correct;  	
 }
 
@@ -339,7 +339,7 @@ boolean correct=false;
 Pattern ptrn1 = Pattern.compile("([0-3\\-][0-9\\-])\\.([01\\-][0-9\\-])\\.([2\\-][0\\-][0-3\\-][0-9\\-])");
 Matcher m1 = ptrn1.matcher(date);
 if (m1.matches()) correct=true;
-else System.err.println("Некорректно введена дата, введите еще раз");
+else System.err.println("РќРµРєРѕСЂСЂРµРєС‚РЅРѕ РІРІРµРґРµРЅР° РґР°С‚Р°, РІРІРµРґРёС‚Рµ РµС‰Рµ СЂР°Р·");
 return correct;  	
 }
 
@@ -348,7 +348,7 @@ boolean correct=false;
 Pattern ptrn1 = Pattern.compile("\\w+@\\w+\\.[a-z]{2,}");
 Matcher m1 = ptrn1.matcher(email);
 if (m1.matches()) correct=true;
-else System.err.println("Некорректно введена почта, введите еще раз");
+else System.err.println("РќРµРєРѕСЂСЂРµРєС‚РЅРѕ РІРІРµРґРµРЅР° РїРѕС‡С‚Р°, РІРІРµРґРёС‚Рµ РµС‰Рµ СЂР°Р·");
 return correct;  	
 }
 

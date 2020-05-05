@@ -1,4 +1,4 @@
-/*Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
+п»ї/*вЂ”С„РѕСЂРјРёСЂРѕРІР°С‚СЊ РєРІР°РґСЂР°С‚РЅСѓСЋ РјР°С‚СЂРёС†Сѓ РїРѕСЂВ¤РґРєР° n РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РѕР±СЂР°Р·С†Сѓ(n - С‡РµС‚РЅРѕРµ):
  *            1  2   3   .... n
  *            n  n-1 n-2 .... 1
  *            1  2   3   .... n
@@ -37,7 +37,7 @@ public static int[][] massiveCreate2 (int n){
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите порядок матрицы  ");
+	System.out.print("В¬РІРµРґРёС‚Рµ РїРѕСЂВ¤РґРѕРє РјР°С‚СЂРёС†С‹  ");
 	int n=in.nextInt();
 	int[][]a=massiveCreate2(n);
 	print(a);

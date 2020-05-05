@@ -1,4 +1,4 @@
-package com.artempvn.m1_simplest_classes_and_objects.task_10;
+п»їpackage com.artempvn.m1_simplest_classes_and_objects.task_10;
 class Airline {
 private String destination;
 private String number;
@@ -55,7 +55,7 @@ public String getDays(){
 	return days;
 }
  public String toString() {
-        return "Пункт назначения: "+destination+"; номер рейса: "+number+"; тип самолета: "+plane+"; время вылета: "+departureTime+"; дни недели: "+days+"\n";
+        return "РџСѓРЅРєС‚ РЅР°Р·РЅР°С‡РµРЅРёСЏ: "+destination+"; РЅРѕРјРµСЂ СЂРµР№СЃР°: "+number+"; С‚РёРї СЃР°РјРѕР»РµС‚Р°: "+plane+"; РІСЂРµРјСЏ РІС‹Р»РµС‚Р°: "+departureTime+"; РґРЅРё РЅРµРґРµР»Рё: "+days+"\n";
     }
 }
 

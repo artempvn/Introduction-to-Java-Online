@@ -1,4 +1,4 @@
-//В строке вставить после каждого символа 'a' символ 'b'.
+п»ї//Р’ СЃС‚СЂРѕРєРµ РІСЃС‚Р°РІРёС‚СЊ РїРѕСЃР»Рµ РєР°Р¶РґРѕРіРѕ СЃРёРјРІРѕР»Р° 'a' СЃРёРјРІРѕР» 'b'.
 package com.artempvn.m_2_String;
 import java.util.Scanner;
 import java.util.*;
@@ -56,11 +56,11 @@ return a;
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите количество элементов строки:  ");
+System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃС‚СЂРѕРєРё:  ");
 	int n=in.nextInt();
 	String a=massiveCreate(n);
 print(a);
-System.out.println("Строка с символом 'b' после 'a':  ");
+System.out.println("РЎС‚СЂРѕРєР° СЃ СЃРёРјРІРѕР»РѕРј 'b' РїРѕСЃР»Рµ 'a':  ");
 function(a);
 	}
 	

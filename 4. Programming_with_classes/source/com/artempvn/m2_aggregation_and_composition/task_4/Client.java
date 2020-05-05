@@ -1,6 +1,6 @@
-//Счета. Клиент может иметь несколько счетов в банке. Учитывать возможность блокировки/разблокировки 
-//счета. Реализовать поиск и сортировку счетов. Вычисление общей суммы по счетам. Вычисление суммы по 
-//всем счетам, имеющим положительный и отрицательный балансы отдельно.
+п»ї//РЎС‡РµС‚Р°. РљР»РёРµРЅС‚ РјРѕР¶РµС‚ РёРјРµС‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ СЃС‡РµС‚РѕРІ РІ Р±Р°РЅРєРµ. РЈС‡РёС‚С‹РІР°С‚СЊ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ Р±Р»РѕРєРёСЂРѕРІРєРё/СЂР°Р·Р±Р»РѕРєРёСЂРѕРІРєРё 
+//СЃС‡РµС‚Р°. Р РµР°Р»РёР·РѕРІР°С‚СЊ РїРѕРёСЃРє Рё СЃРѕСЂС‚РёСЂРѕРІРєСѓ СЃС‡РµС‚РѕРІ. Р’С‹С‡РёСЃР»РµРЅРёРµ РѕР±С‰РµР№ СЃСѓРјРјС‹ РїРѕ СЃС‡РµС‚Р°Рј. Р’С‹С‡РёСЃР»РµРЅРёРµ СЃСѓРјРјС‹ РїРѕ 
+//РІСЃРµРј СЃС‡РµС‚Р°Рј, РёРјРµСЋС‰РёРј РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Р№ Рё РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Р№ Р±Р°Р»Р°РЅСЃС‹ РѕС‚РґРµР»СЊРЅРѕ.
 package com.artempvn.m2_aggregation_and_composition.task_4;
 import java.util.*;
 import static java.lang.Math.*;
@@ -29,7 +29,7 @@ class IdCompare implements Comparator<BankAccount>{
 	}
 }
 public  void function (){
-System.out.println("Сортировка по id счета");
+System.out.println("РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ id СЃС‡РµС‚Р°");
 IdCompare idcom=new IdCompare();
 Collections.sort(accounts,idcom);	
 }
@@ -44,7 +44,7 @@ class MoneyCompare implements Comparator<BankAccount>{
 	}
 }
 public  void function1 (){ 
-System.out.println("Сортировка по количеству денег на счете");
+System.out.println("РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РєРѕР»РёС‡РµСЃС‚РІСѓ РґРµРЅРµРі РЅР° СЃС‡РµС‚Рµ");
 MoneyCompare moncom=new MoneyCompare();
 Collections.sort(accounts,moncom);	
 }
@@ -59,7 +59,7 @@ class FrozenCompare implements Comparator<BankAccount>{
 	}
 }
 public  void function2 (){ 
-System.out.println("Сортировка по состоянию счета");
+System.out.println("РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ СЃРѕСЃС‚РѕСЏРЅРёСЋ СЃС‡РµС‚Р°");
 FrozenCompare frozcom=new FrozenCompare();
 Collections.sort(accounts,frozcom);	
 }
@@ -74,15 +74,15 @@ public void deleteAccount(int id){
 }
 
 public void search(int id){
-	System.out.printf("Поиск счета id: %d\n",id);
+	System.out.printf("РџРѕРёСЃРє СЃС‡РµС‚Р° id: %d\n",id);
 boolean find=false;	
 	for(BankAccount b:accounts){
 	if (id==(b.getId()))	{
-		System.out.printf("id: %d; Количество денег: %.2f; Блокировка счета: %b \n",b.getId(),b.getMoney(),b.isFrozen());
+		System.out.printf("id: %d; РљРѕР»РёС‡РµСЃС‚РІРѕ РґРµРЅРµРі: %.2f; Р‘Р»РѕРєРёСЂРѕРІРєР° СЃС‡РµС‚Р°: %b \n",b.getId(),b.getMoney(),b.isFrozen());
 		find=true;	
 	}
 	}
-	if(!find)System.out.printf("Cчет id: %d не найден\n",id);
+	if(!find)System.out.printf("CС‡РµС‚ id: %d РЅРµ РЅР°Р№РґРµРЅ\n",id);
 }
 
 
@@ -92,15 +92,15 @@ public void printTotal(){
 		if (b.getMoney()>0) plusMoney+=b.getMoney();
 		else minusMoney+=abs(b.getMoney());
 	}
-System.out.printf("Общая сумма: %.2f \n",totalMoney);
-System.out.printf("Положительный баланс: %.2f \n",plusMoney);	
-System.out.printf("Отрицательный баланс: %.2f \n",minusMoney);		
+System.out.printf("РћР±С‰Р°СЏ СЃСѓРјРјР°: %.2f \n",totalMoney);
+System.out.printf("РџРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Р№ Р±Р°Р»Р°РЅСЃ: %.2f \n",plusMoney);	
+System.out.printf("РћС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Р№ Р±Р°Р»Р°РЅСЃ: %.2f \n",minusMoney);		
 }
 
 
 public void print(){
 	for(BankAccount b:accounts){
-	System.out.printf("id: %d; Количество денег: %.2f; Блокировка счета: %b \n",b.getId(),b.getMoney(),b.isFrozen());	
+	System.out.printf("id: %d; РљРѕР»РёС‡РµСЃС‚РІРѕ РґРµРЅРµРі: %.2f; Р‘Р»РѕРєРёСЂРѕРІРєР° СЃС‡РµС‚Р°: %b \n",b.getId(),b.getMoney(),b.isFrozen());	
 	}
 }
 
@@ -110,7 +110,7 @@ BankAccount b1=new BankAccount(1,120,true);
 BankAccount b2=new BankAccount(2,100,false);
 BankAccount b3=new BankAccount(3,500,false);
 BankAccount b4=new BankAccount(4,-10,true);
-Client a=new Client("Клиент1",b1,b2,b3,b4);
+Client a=new Client("РљР»РёРµРЅС‚1",b1,b2,b3,b4);
 a.print();
 a.function();
 a.print();

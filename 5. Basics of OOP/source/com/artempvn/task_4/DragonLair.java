@@ -1,6 +1,6 @@
-//Дракон и его сокровища.  Создать программу, позволяющую обрабатывать сведения о 100 сокровищах в пещере 
-//дракона.  Реализовать  возможность  просмотра  сокровищ,  выбора  самого  дорогого  по  стоимости  сокровища  и 
-//выбора сокровищ на заданную сумму.
+п»ї//Ж’СЂР°РєРѕРЅ Рё РµРіРѕ СЃРѕРєСЂРѕРІРёС‰Р°.  вЂ”РѕР·РґР°С‚СЊ РїСЂРѕРіСЂР°РјРјСѓ, РїРѕР·РІРѕР»В¤СЋС‰СѓСЋ РѕР±СЂР°Р±Р°С‚С‹РІР°С‚СЊ СЃРІРµРґРµРЅРёВ¤ Рѕ 100 СЃРѕРєСЂРѕРІРёС‰Р°С… РІ РїРµС‰РµСЂРµ 
+//РґСЂР°РєРѕРЅР°.  вЂ“РµР°Р»РёР·РѕРІР°С‚СЊ  РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ  РїСЂРѕСЃРјРѕС‚СЂР°  СЃРѕРєСЂРѕРІРёС‰,  РІС‹Р±РѕСЂР°  СЃР°РјРѕРіРѕ  РґРѕСЂРѕРіРѕРіРѕ  РїРѕ  СЃС‚РѕРёРјРѕСЃС‚Рё  СЃРѕРєСЂРѕРІРёС‰Р°  Рё 
+//РІС‹Р±РѕСЂР° СЃРѕРєСЂРѕРІРёС‰ РЅР° Р·Р°РґР°РЅРЅСѓСЋ СЃСѓРјРјСѓ.
 package com.artempvn.task_4;
 import java.util.*;
 import java.nio.file.*;
@@ -36,9 +36,9 @@ treasures.add(treasure);
 }
 
 public void explore(){
-	System.out.printf("Пещера: %s\n", name);	
+	System.out.printf("С•РµС‰РµСЂР°: %s\n", name);	
 for(Treasure tr:treasures){
-	System.out.printf("%-4d сокровище: %-10s стоимость: %-5d\n",tr.getId(), tr.getName(),tr.getCost());
+	System.out.printf("%-4d СЃРѕРєСЂРѕРІРёС‰Рµ: %-10s СЃС‚РѕРёРјРѕСЃС‚СЊ: %-5d\n",tr.getId(), tr.getName(),tr.getCost());
 	}
 }
 
@@ -47,7 +47,7 @@ topTreasure=treasures.get(0);
 for(Treasure tr:treasures){
 	if(topTreasure.getCost()<tr.getCost()) topTreasure=tr;
 	}
-System.out.printf("Самое ценное сокровище: %d  %s стоимость: %d\n",topTreasure.getId(), topTreasure.getName(),topTreasure.getCost());	
+System.out.printf("вЂ”Р°РјРѕРµ С†РµРЅРЅРѕРµ СЃРѕРєСЂРѕРІРёС‰Рµ: %d  %s СЃС‚РѕРёРјРѕСЃС‚СЊ: %d\n",topTreasure.getId(), topTreasure.getName(),topTreasure.getCost());	
 }
 
 public void takeOnAmount(int amount){
@@ -56,7 +56,7 @@ for(Treasure tr:treasures){
 	max+=tr.getCost();
 }
 if (max<amount)	{
-	System.out.println("Сокровищ на указанную сумму нет.");
+	System.out.println("вЂ”РѕРєСЂРѕРІРёС‰ РЅР° СѓРєР°Р·Р°РЅРЅСѓСЋ СЃСѓРјРјСѓ РЅРµС‚.");
 	return;
 }
 int sum=0;
@@ -93,31 +93,31 @@ do {
 
 }
 if (treasuresOnAmount.size()==0){
-System.out.printf("На такую стоимость сокровищ не набрать\n");	
+System.out.printf("РЊР° С‚Р°РєСѓСЋ СЃС‚РѕРёРјРѕСЃС‚СЊ СЃРѕРєСЂРѕРІРёС‰ РЅРµ РЅР°Р±СЂР°С‚СЊ\n");	
 } else{
-System.out.printf("Сокровища на сумму %d: \n", amount);	
+System.out.printf("вЂ”РѕРєСЂРѕРІРёС‰Р° РЅР° СЃСѓРјРјСѓ %d: \n", amount);	
 for(Treasure tr:treasuresOnAmount){
-	System.out.printf("%-4d сокровище: %-10s стоимость: %-5d\n",tr.getId(), tr.getName(),tr.getCost());
+	System.out.printf("%-4d СЃРѕРєСЂРѕРІРёС‰Рµ: %-10s СЃС‚РѕРёРјРѕСЃС‚СЊ: %-5d\n",tr.getId(), tr.getName(),tr.getCost());
 	}
 }
 }
 
 
 public static void main (String [] args) {
-DragonLair d1=new DragonLair("Логово Древнего Дракона");
+DragonLair d1=new DragonLair("Р‹РѕРіРѕРІРѕ Ж’СЂРµРІРЅРµРіРѕ Ж’СЂР°РєРѕРЅР°");
 for (int i=0;i<100;i++){
 d1.add(Treasure.create());	
 }
 	
 Scanner in = new Scanner(System.in);
-System.out.printf("Мы нашли пещеру: %s\nЖелаете ее исследовать?(y/n) ",d1.getName());
+System.out.printf("С›С‹ РЅР°С€Р»Рё РїРµС‰РµСЂСѓ: %s\nв€†РµР»Р°РµС‚Рµ РµРµ РёСЃСЃР»РµРґРѕРІР°С‚СЊ?(y/n) ",d1.getName());
 String choise=in.next();
 if(choise.equals("y")) d1.explore();
-System.out.printf("Взять самое ценное сокровище или же набрать сокровищ на определенную сумму?(1/2) ");
+System.out.printf("В¬Р·В¤С‚СЊ СЃР°РјРѕРµ С†РµРЅРЅРѕРµ СЃРѕРєСЂРѕРІРёС‰Рµ РёР»Рё Р¶Рµ РЅР°Р±СЂР°С‚СЊ СЃРѕРєСЂРѕРІРёС‰ РЅР° РѕРїСЂРµРґРµР»РµРЅРЅСѓСЋ СЃСѓРјРјСѓ?(1/2) ");
 choise=in.next();
 if(choise.equals("1")) d1.takeTop();
 if(choise.equals("2")) {
-System.out.printf("На какую сумму набрать сокровищ? ");	
+System.out.printf("РЊР° РєР°РєСѓСЋ СЃСѓРјРјСѓ РЅР°Р±СЂР°С‚СЊ СЃРѕРєСЂРѕРІРёС‰? ");	
 choise=in.next();
 	d1.takeOnAmount(Integer.parseInt(choise));
 

@@ -1,4 +1,4 @@
-//С помощью функции копирования и операции конкатенации составить из частей слова “информатика” слово “торт”
+п»ї//РЎ РїРѕРјРѕС‰СЊСЋ С„СѓРЅРєС†РёРё РєРѕРїРёСЂРѕРІР°РЅРёСЏ Рё РѕРїРµСЂР°С†РёРё РєРѕРЅРєР°С‚РµРЅР°С†РёРё СЃРѕСЃС‚Р°РІРёС‚СЊ РёР· С‡Р°СЃС‚РµР№ СЃР»РѕРІР° вЂњРёРЅС„РѕСЂРјР°С‚РёРєР°вЂќ СЃР»РѕРІРѕ вЂњС‚РѕСЂС‚вЂќ
 package com.artempvn.m_2_String;
 import java.util.Scanner;
 import java.util.*;
@@ -19,7 +19,7 @@ public static void print (int a){
 
 public static void function (String a){ 
 String b="";
-String c="торт";
+String c="С‚РѕСЂС‚";
 int begin=0;
 char[] save;
 int end=c.length();
@@ -42,7 +42,7 @@ break;
 	}
 
 public static void main (String [] args) {
-String a="информатика";
+String a="РёРЅС„РѕСЂРјР°С‚РёРєР°";
 function(a);
 	
 	

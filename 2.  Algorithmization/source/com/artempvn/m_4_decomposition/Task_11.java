@@ -1,4 +1,4 @@
-//Написать метод(методы), определяющий, в каком из данных двух чисел больше цифр.
+п»ї//РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹), РѕРїСЂРµРґРµР»СЏСЋС‰РёР№, РІ РєР°РєРѕРј РёР· РґР°РЅРЅС‹С… РґРІСѓС… С‡РёСЃРµР» Р±РѕР»СЊС€Рµ С†РёС„СЂ.
 package com.artempvn.m_4_decomposition;
 import java.util.Scanner;
 import java.util.*;
@@ -25,12 +25,12 @@ int a1=function(a);
 int b1=function(b);
 String c="";
 if(a1>b1){
-	c="больше, чем ";
+	c="Р±РѕР»СЊС€Рµ, С‡РµРј ";
 } else {
 	if (a1<b1){
-		c="меньше, чем ";
+		c="РјРµРЅСЊС€Рµ, С‡РµРј ";
 	} else {
-	c="равно количеству цифр ";	
+	c="СЂР°РІРЅРѕ РєРѕР»РёС‡РµСЃС‚РІСѓ С†РёС„СЂ ";	
 	}
 }
 return c;
@@ -39,11 +39,11 @@ return c;
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-	System.out.print("Введите первое число:  ");
+	System.out.print("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ:  ");
 	int a=in.nextInt();	
-	System.out.print("Введите второе число:  ");
+	System.out.print("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ:  ");
 	int b=in.nextInt();
-	System.out.printf("В числе %d количество цифр %s в числе %d \n", a,function1(a,b),b);
+	System.out.printf("Р’ С‡РёСЃР»Рµ %d РєРѕР»РёС‡РµСЃС‚РІРѕ С†РёС„СЂ %s РІ С‡РёСЃР»Рµ %d \n", a,function1(a,b),b);
 	
 	}	
 }

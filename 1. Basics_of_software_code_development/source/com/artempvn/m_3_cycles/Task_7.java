@@ -1,5 +1,5 @@
-//Для каждого натурального числа в промежутке от m до n вывести все делители, кроме единицы и самого числа. 
-//m и n вводятся с клавиатуры.
+п»ї//Ж’Р»В¤ РєР°Р¶РґРѕРіРѕ РЅР°С‚СѓСЂР°Р»СЊРЅРѕРіРѕ С‡РёСЃР»Р° РІ РїСЂРѕРјРµР¶СѓС‚РєРµ РѕС‚ m РґРѕ n РІС‹РІРµСЃС‚Рё РІСЃРµ РґРµР»РёС‚РµР»Рё, РєСЂРѕРјРµ РµРґРёРЅРёС†С‹ Рё СЃР°РјРѕРіРѕ С‡РёСЃР»Р°. 
+//m Рё n РІРІРѕРґВ¤С‚СЃВ¤ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹.
 package com.artempvn.m_3_cycles;
 import java.util.Scanner;
 import java.math.*;
@@ -8,14 +8,14 @@ public class Task_7 {
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите m ");
+	System.out.print("В¬РІРµРґРёС‚Рµ m ");
 	int m=in.nextInt();
-	System.out.print("Введите n ");
+	System.out.print("В¬РІРµРґРёС‚Рµ n ");
 	int n=in.nextInt();
 	System.out.println();
 	
 for(int x=m;x<n+1;x++){
-	System.out.printf("Для числа %d делители: ",x);	
+	System.out.printf("Ж’Р»В¤ С‡РёСЃР»Р° %d РґРµР»РёС‚РµР»Рё: ",x);	
  for (int d=2; d<n;d++){
 	 if ((x%d==0)&&(x!=d)){
 	System.out.print(d+" ");	 

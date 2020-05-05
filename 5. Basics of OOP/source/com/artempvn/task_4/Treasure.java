@@ -1,4 +1,4 @@
-package com.artempvn.task_4;
+п»їpackage com.artempvn.task_4;
 import java.util.*;
 import static java.lang.Math.*;
 class Treasure {
@@ -25,7 +25,7 @@ public int getCost(){
 }
 
 public static Treasure create(){
-String[] names={"аметист","гранат","изумруд","бриллиант", "рубин","опал","жемчуг"};
+String[] names={"Р°РјРµС‚РёСЃС‚","РіСЂР°РЅР°С‚","РёР·СѓРјСЂСѓРґ","Р±СЂРёР»Р»РёР°РЅС‚", "СЂСѓР±РёРЅ","РѕРїР°Р»","Р¶РµРјС‡СѓРі"};
 int nm=(int)(random()*names.length);
 int cst=(int)(random()*50+1);	
 Treasure t=new Treasure(names[nm],cst);	

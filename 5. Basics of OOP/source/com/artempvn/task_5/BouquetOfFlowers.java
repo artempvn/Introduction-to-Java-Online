@@ -1,6 +1,6 @@
-//Вариант A. Цветочная композиция. Реализовать приложение, позволяющее создавать цветочные композиции
-//(объект, представляющий собой цветочную композицию). Составляющими цветочной композиции являются цветы 
-//и упаковка.
+п»ї//В¬Р°СЂРёР°РЅС‚ A. Г·РІРµС‚РѕС‡РЅР°В¤ РєРѕРјРїРѕР·РёС†РёВ¤. вЂ“РµР°Р»РёР·РѕРІР°С‚СЊ РїСЂРёР»РѕР¶РµРЅРёРµ, РїРѕР·РІРѕР»В¤СЋС‰РµРµ СЃРѕР·РґР°РІР°С‚СЊ С†РІРµС‚РѕС‡РЅС‹Рµ РєРѕРјРїРѕР·РёС†РёРё
+//(РѕР±СЉРµРєС‚, РїСЂРµРґСЃС‚Р°РІР»В¤СЋС‰РёР№ СЃРѕР±РѕР№ С†РІРµС‚РѕС‡РЅСѓСЋ РєРѕРјРїРѕР·РёС†РёСЋ). вЂ”РѕСЃС‚Р°РІР»В¤СЋС‰РёРјРё С†РІРµС‚РѕС‡РЅРѕР№ РєРѕРјРїРѕР·РёС†РёРё В¤РІР»В¤СЋС‚СЃВ¤ С†РІРµС‚С‹ 
+//Рё СѓРїР°РєРѕРІРєР°.
 package com.artempvn.task_5;
 import java.util.*;
 import java.nio.file.*;
@@ -34,7 +34,7 @@ flowers.add(flower);
 
 public void check(){
 Scanner in = new Scanner(System.in);
-System.out.printf("Введите желаемые цветы ");
+System.out.printf("В¬РІРµРґРёС‚Рµ Р¶РµР»Р°РµРјС‹Рµ С†РІРµС‚С‹ ");
 
 do{
 String s=in.nextLine();		
@@ -53,7 +53,7 @@ if (flowers.size()<1) Flower.print();
 
 public void checkPackaging(){ 
 Scanner in = new Scanner(System.in);
-System.out.printf("Введите желаемую упаковку ");
+System.out.printf("В¬РІРµРґРёС‚Рµ Р¶РµР»Р°РµРјСѓСЋ СѓРїР°РєРѕРІРєСѓ ");
 
 Packaging[] p = Packaging.values();
 boolean isCorrect=false;
@@ -75,7 +75,7 @@ int i=0;
 int[] amountOfFlowers=new int[flowers.size()];
 for(Flower flower:flowers){
 	String amount="";
-System.out.printf("Сколько цветов (%s) добавить в цветочную композицию? ",flower.getName());	
+System.out.printf("вЂ”РєРѕР»СЊРєРѕ С†РІРµС‚РѕРІ (%s) РґРѕР±Р°РІРёС‚СЊ РІ С†РІРµС‚РѕС‡РЅСѓСЋ РєРѕРјРїРѕР·РёС†РёСЋ? ",flower.getName());	
 boolean isNumber=false;
 do {
 amount=in.next();
@@ -83,7 +83,7 @@ amount=in.next();
         Integer.parseInt(amount);
         isNumber=true;
     } catch (NumberFormatException e) {
-        System.err.println("Введите число");
+        System.err.println("В¬РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ");
     }
 }while (!isNumber);
 amountOfFlowers[i]=Integer.parseInt(amount);
@@ -100,14 +100,14 @@ for (int j=0;j<amountOfFlowers.length;j++){
 }
 
 public void print (){
-System.out.printf("Цветочная композиция:\n");
-System.out.printf("Упаковка %s\n",packaking.getName());
+System.out.printf("Г·РІРµС‚РѕС‡РЅР°В¤ РєРѕРјРїРѕР·РёС†РёВ¤:\n");
+System.out.printf("вЂќРїР°РєРѕРІРєР° %s\n",packaking.getName());
 		int count=1;
 for (int i=0;i<flowers.size();i++){
 	for (int j=i+1;j<flowers.size();j++){
 if (flowers.get(i).getName()==flowers.get(j).getName()) count++;	
 }
-System.out.printf("%s %dшт\n",flowers.get(i).getName(),count);
+System.out.printf("%s %dС€С‚\n",flowers.get(i).getName(),count);
 i+=count-1;
 count=1;
 }

@@ -1,6 +1,6 @@
-/*Сформировать квадратную матрицу порядка N по правилу: 
+п»ї/*РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ РєРІР°РґСЂР°С‚РЅСѓСЋ РјР°С‚СЂРёС†Сѓ РїРѕСЂСЏРґРєР° N РїРѕ РїСЂР°РІРёР»Сѓ: 
 * A[I,J] = sin((I^2 - J^2) / N)
-и подсчитать количество положительных элементов в ней.*/
+Рё РїРѕРґСЃС‡РёС‚Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ РІ РЅРµР№.*/
 package com.artempvn.m_2_twoDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -23,13 +23,13 @@ public static double[][] massiveCreate2 (int n){
 			if (a[i][j]>0) {count++;}
 		}
 	}
-	System.out.println("Количество положительных элементов: "+count+"\n");
+	System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ: "+count+"\n");
 	return a;
 	}
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите порядок матрицы  ");
+	System.out.print("Р’РІРµРґРёС‚Рµ РїРѕСЂСЏРґРѕРє РјР°С‚СЂРёС†С‹  ");
 	int n=in.nextInt();
 	double[][]a=massiveCreate2(n);
 	print(a);

@@ -1,4 +1,4 @@
-package com.artempvn.m2_aggregation_and_composition.task_3;
+﻿package com.artempvn.m2_aggregation_and_composition.task_3;
 import java.util.*;
 class  Area { 
 private String name;

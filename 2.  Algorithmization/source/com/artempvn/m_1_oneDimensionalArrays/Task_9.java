@@ -1,5 +1,5 @@
-//В массиве целых чисел с количеством элементов  n  найти наиболее часто встречающееся число. Если таких 
-//чисел несколько, то определить наименьшее из них.
+п»ї//В¬ РјР°СЃСЃРёРІРµ С†РµР»С‹С… С‡РёСЃРµР» СЃ РєРѕР»РёС‡РµСЃС‚РІРѕРј СЌР»РµРјРµРЅС‚РѕРІ  n  РЅР°Р№С‚Рё РЅР°РёР±РѕР»РµРµ С‡Р°СЃС‚Рѕ РІСЃС‚СЂРµС‡Р°СЋС‰РµРµСЃВ¤ С‡РёСЃР»Рѕ. в‰€СЃР»Рё С‚Р°РєРёС… 
+//С‡РёСЃРµР» РЅРµСЃРєРѕР»СЊРєРѕ, С‚Рѕ РѕРїСЂРµРґРµР»РёС‚СЊ РЅР°РёРјРµРЅСЊС€РµРµ РёР· РЅРёС….
 package com.artempvn.m_1_oneDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -52,7 +52,7 @@ if(minValue>=maximum[i]) minValue=maximum[i];
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите N ");
+	System.out.print("В¬РІРµРґРёС‚Рµ N ");
 	int N=in.nextInt();
 	System.out.println();
 	int []A=massiveCreate(N);

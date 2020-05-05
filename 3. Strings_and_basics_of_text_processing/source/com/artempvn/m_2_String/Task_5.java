@@ -1,4 +1,4 @@
-//Подсчитать, сколько раз среди символов заданной строки встречается буква “а”.
+п»ї//РџРѕРґСЃС‡РёС‚Р°С‚СЊ, СЃРєРѕР»СЊРєРѕ СЂР°Р· СЃСЂРµРґРё СЃРёРјРІРѕР»РѕРІ Р·Р°РґР°РЅРЅРѕР№ СЃС‚СЂРѕРєРё РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ Р±СѓРєРІР° вЂњР°вЂќ.
 package com.artempvn.m_2_String;
 import java.util.Scanner;
 import java.util.*;
@@ -60,11 +60,11 @@ return count;
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите количество элементов строки:  ");
+System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃС‚СЂРѕРєРё:  ");
 	int n=in.nextInt();
 	String a=massiveCreate(n);
 print(a);
-System.out.printf("Количество букв'a': %d\n", function(a));
+System.out.printf("РљРѕР»РёС‡РµСЃС‚РІРѕ Р±СѓРєРІ'a': %d\n", function(a));
 	}
 	
 }

@@ -1,5 +1,5 @@
-//Создать класс Календарь с внутренним классом, с помощью объектов которого можно хранить информацию о 
-//выходных и праздничных днях.
+п»ї//РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ РљР°Р»РµРЅРґР°СЂСЊ СЃ РІРЅСѓС‚СЂРµРЅРЅРёРј РєР»Р°СЃСЃРѕРј, СЃ РїРѕРјРѕС‰СЊСЋ РѕР±СЉРµРєС‚РѕРІ РєРѕС‚РѕСЂРѕРіРѕ РјРѕР¶РЅРѕ С…СЂР°РЅРёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ 
+//РІС‹С…РѕРґРЅС‹С… Рё РїСЂР°Р·РґРЅРёС‡РЅС‹С… РґРЅСЏС….
 package com.artempvn.task_3;
 import java.util.*;
 import java.nio.file.*;
@@ -25,9 +25,9 @@ public void add (Holydays holyday){
 holydays.add(holyday);
 }
 public void print(){
-System.out.printf("Год: %d\n", year);	
+System.out.printf("Р“РѕРґ: %d\n", year);	
 for(Holydays hd:holydays){
-	System.out.printf("месяц: %-8s день: %-3d %s\n",hd.getMonth(), hd.getDay(),hd.getHoliday());
+	System.out.printf("РјРµСЃСЏС†: %-8s РґРµРЅСЊ: %-3d %s\n",hd.getMonth(), hd.getDay(),hd.getHoliday());
 	}
 }
 
@@ -57,11 +57,11 @@ public String getHoliday(){
 
 public static void main (String [] args) {
 Calendar c1=new Calendar(2020);	
-Calendar.Holydays h1=c1.new Holydays(1,"январь","Новый год");
-Calendar.Holydays h2=c1.new Holydays(4,"январь","выходной");
-Calendar.Holydays h3=c1.new Holydays(5,"январь","выходной");
-Calendar.Holydays h4=c1.new Holydays(7,"январь","Рождество");
-Calendar.Holydays h5=c1.new Holydays(11,"январь","выходной");
+Calendar.Holydays h1=c1.new Holydays(1,"СЏРЅРІР°СЂСЊ","РќРѕРІС‹Р№ РіРѕРґ");
+Calendar.Holydays h2=c1.new Holydays(4,"СЏРЅРІР°СЂСЊ","РІС‹С…РѕРґРЅРѕР№");
+Calendar.Holydays h3=c1.new Holydays(5,"СЏРЅРІР°СЂСЊ","РІС‹С…РѕРґРЅРѕР№");
+Calendar.Holydays h4=c1.new Holydays(7,"СЏРЅРІР°СЂСЊ","Р РѕР¶РґРµСЃС‚РІРѕ");
+Calendar.Holydays h5=c1.new Holydays(11,"СЏРЅРІР°СЂСЊ","РІС‹С…РѕРґРЅРѕР№");
 c1.print();
 }
 }

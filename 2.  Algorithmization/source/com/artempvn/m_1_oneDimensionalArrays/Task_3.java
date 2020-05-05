@@ -1,5 +1,5 @@
-//Дан  массив  действительных  чисел,  размерность  которого  N.  Подсчитать,  сколько  в  нем  отрицательных, 
-//положительных и нулевых элементов.
+п»ї//Р”Р°РЅ  РјР°СЃСЃРёРІ  РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹С…  С‡РёСЃРµР»,  СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ  РєРѕС‚РѕСЂРѕРіРѕ  N.  РџРѕРґСЃС‡РёС‚Р°С‚СЊ,  СЃРєРѕР»СЊРєРѕ  РІ  РЅРµРј  РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С…, 
+//РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… Рё РЅСѓР»РµРІС‹С… СЌР»РµРјРµРЅС‚РѕРІ.
 package com.artempvn.m_1_oneDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -19,13 +19,13 @@ for(int i=0;i<s.length;i++){
 				if (s[i]==0){
 		totalzero++;
 				}
-}String a="Число отрицательных элементов: "+totalneg+"; положительных: "+totalpos+"; нулевых: "+totalzero;
+}String a="Р§РёСЃР»Рѕ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ: "+totalneg+"; РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С…: "+totalpos+"; РЅСѓР»РµРІС‹С…: "+totalzero;
 		return a;	
 	}	
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите N ");
+	System.out.print("Р’РІРµРґРёС‚Рµ N ");
 	int N=in.nextInt();
 	System.out.println();
 	double[]A=new double[N];

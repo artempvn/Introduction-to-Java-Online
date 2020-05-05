@@ -1,4 +1,4 @@
-//Даны целые числа а1 ,а2 ,..., а(n) . Вывести на печать только те числа, для которых аi > i.
+п»ї//Р”Р°РЅС‹ С†РµР»С‹Рµ С‡РёСЃР»Р° Р°1 ,Р°2 ,..., Р°(n) . Р’С‹РІРµСЃС‚Рё РЅР° РїРµС‡Р°С‚СЊ С‚РѕР»СЊРєРѕ С‚Рµ С‡РёСЃР»Р°, РґР»СЏ РєРѕС‚РѕСЂС‹С… Р°i > i.
 package com.artempvn.m_1_oneDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -22,7 +22,7 @@ public static void invert(int[] n){
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите N ");
+	System.out.print("Р’РІРµРґРёС‚Рµ N ");
 	int N=in.nextInt();
 	System.out.println();
 	int []A=massiveCreate(N);

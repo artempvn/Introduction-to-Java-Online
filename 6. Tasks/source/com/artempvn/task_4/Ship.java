@@ -1,4 +1,4 @@
-package com.artempvn.task_4;
+п»їpackage com.artempvn.task_4;
 import java.util.*;
 import static java.lang.Math.*;
 
@@ -59,7 +59,7 @@ adventuresInAnotherPlaces();
 	
 public void goToPort(){
 harbour.checkStatus();
-System.out.println(name+" вошел в порт. На борту "+cargo+" контейнеров из "+capacity);	
+System.out.println(name+" РІРѕС€РµР» РІ РїРѕСЂС‚. РЊР° Р±РѕСЂС‚Сѓ "+cargo+" РєРѕРЅС‚РµР№РЅРµСЂРѕРІ РёР· "+capacity);	
 }
 
 public boolean loading(){
@@ -68,13 +68,13 @@ while (cargo<capacity){
 if (harbour.getWarehouse().tryLoadCargo()) {
 	cargo++;
 	isLoaded=true;
-	System.out.println(name+" загрузил контейнер");
+	System.out.println(name+" Р·Р°РіСЂСѓР·РёР» РєРѕРЅС‚РµР№РЅРµСЂ");
 } else {
-System.out.println("На складе не осталось контейнеров для "+name);	
+System.out.println("РЊР° СЃРєР»Р°РґРµ РЅРµ РѕСЃС‚Р°Р»РѕСЃСЊ РєРѕРЅС‚РµР№РЅРµСЂРѕРІ РґР»В¤ "+name);	
 break;
 }
 	}
-	if (isLoaded) System.out.println(name+" загрузил все доступные контейнеры.");	
+	if (isLoaded) System.out.println(name+" Р·Р°РіСЂСѓР·РёР» РІСЃРµ РґРѕСЃС‚СѓРїРЅС‹Рµ РєРѕРЅС‚РµР№РЅРµСЂС‹.");	
 	
 return isLoaded;
 }
@@ -85,20 +85,20 @@ while (cargo>0){
 if (harbour.getWarehouse().tryUnLoadCargo()) {
 	cargo--;
 	isUnLoaded=true;
-	System.out.println(name+" выгрузил контейнер");
+	System.out.println(name+" РІС‹РіСЂСѓР·РёР» РєРѕРЅС‚РµР№РЅРµСЂ");
 } else {
-System.out.println("На складе нет места для контейнеров от "+name);	
+System.out.println("РЊР° СЃРєР»Р°РґРµ РЅРµС‚ РјРµСЃС‚Р° РґР»В¤ РєРѕРЅС‚РµР№РЅРµСЂРѕРІ РѕС‚ "+name);	
 break;
 }
 	}
-	if (isUnLoaded) System.out.println(name+" выгрузил все доступные контейнеры.");	
+	if (isUnLoaded) System.out.println(name+" РІС‹РіСЂСѓР·РёР» РІСЃРµ РґРѕСЃС‚СѓРїРЅС‹Рµ РєРѕРЅС‚РµР№РЅРµСЂС‹.");	
 	
 return isUnLoaded;
 }
 
 public void leavePort(){
 harbour.leavePort();
-System.out.println(name+" покинул порт. На борту "+cargo+" контейнеров из "+capacity);	
+System.out.println(name+" РїРѕРєРёРЅСѓР» РїРѕСЂС‚. РЊР° Р±РѕСЂС‚Сѓ "+cargo+" РєРѕРЅС‚РµР№РЅРµСЂРѕРІ РёР· "+capacity);	
 }
 
 public void adventuresInAnotherPlaces(){

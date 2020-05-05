@@ -1,4 +1,4 @@
-package com.artempvn.task_3.client;
+﻿package com.artempvn.task_3.client;
 class User{
 private String login;
 private String password;

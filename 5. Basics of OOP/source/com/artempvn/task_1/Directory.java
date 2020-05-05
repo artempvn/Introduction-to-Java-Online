@@ -1,4 +1,4 @@
-package com.artempvn.task_1;
+п»їpackage com.artempvn.task_1;
 import java.util.*;
 import java.nio.file.*;
 
@@ -13,7 +13,7 @@ public Directory(String path){
 	Path p=Paths.get(path);
 	try{
 	Files.createDirectory(p);
-	}catch (FileAlreadyExistsException ex){System.err.println("Директория уже создана");}
+	}catch (FileAlreadyExistsException ex){System.err.println("Р”РёСЂРµРєС‚РѕСЂРёСЏ СѓР¶Рµ СЃРѕР·РґР°РЅР°");}
 	catch (Exception ex){ex.printStackTrace();}
 }
 }

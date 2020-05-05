@@ -1,5 +1,5 @@
-//Даны действительные числа а(1) ,а(2) ,..., а(n). 
-//Найти max(a(1)+a(2n),a(2)+a(2n-1),...,a(n)+a(n+1))
+п»ї//Р”Р°РЅС‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹Рµ С‡РёСЃР»Р° Р°(1) ,Р°(2) ,..., Р°(n). 
+//РќР°Р№С‚Рё max(a(1)+a(2n),a(2)+a(2n-1),...,a(n)+a(n+1))
 package com.artempvn.m_1_oneDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -29,7 +29,7 @@ return max;
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите N ");
+	System.out.print("Р’РІРµРґРёС‚Рµ N ");
 	int N=in.nextInt();
 	System.out.println();
 	double []A=massiveCreate(N*2);

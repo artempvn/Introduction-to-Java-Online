@@ -1,4 +1,4 @@
-//Найти сумму квадратов первых ста чисел.
+п»ї//РќР°Р№С‚Рё СЃСѓРјРјСѓ РєРІР°РґСЂР°С‚РѕРІ РїРµСЂРІС‹С… СЃС‚Р° С‡РёСЃРµР».
 package com.artempvn.m_3_cycles;
 import java.util.Scanner;
 import static java.lang.Math.*;
@@ -8,7 +8,7 @@ public static void main (String [] args) {
 for(int i=1;i<100+1;i++){
 	sum+=pow(i,2);
 }
-	System.out.println("Сумма квадратов первых ста чисел равна "+sum);
+	System.out.println("РЎСѓРјРјР° РєРІР°РґСЂР°С‚РѕРІ РїРµСЂРІС‹С… СЃС‚Р° С‡РёСЃРµР» СЂР°РІРЅР° "+sum);
 	}	
 }
 

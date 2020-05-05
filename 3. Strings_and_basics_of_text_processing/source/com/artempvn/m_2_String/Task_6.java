@@ -1,4 +1,4 @@
-//Из заданной строки получить новую, повторив каждый символ дважды.
+п»ї//В»Р· Р·Р°РґР°РЅРЅРѕР№ СЃС‚СЂРѕРєРё РїРѕР»СѓС‡РёС‚СЊ РЅРѕРІСѓСЋ, РїРѕРІС‚РѕСЂРёРІ РєР°Р¶РґС‹Р№ СЃРёРјРІРѕР» РґРІР°Р¶РґС‹.
 package com.artempvn.m_2_String;
 import java.util.Scanner;
 import java.util.*;
@@ -58,11 +58,11 @@ return a;
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите количество элементов строки:  ");
+System.out.print("В¬РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃС‚СЂРѕРєРё:  ");
 	int n=in.nextInt();
 	String a=massiveCreate(n);
 print(a);
-System.out.println("Измененная строка: ");
+System.out.println("В»Р·РјРµРЅРµРЅРЅР°В¤ СЃС‚СЂРѕРєР°: ");
 function(a);
 	}	
 }

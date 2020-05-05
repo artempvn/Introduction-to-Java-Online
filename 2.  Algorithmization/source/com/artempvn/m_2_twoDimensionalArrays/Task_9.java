@@ -1,5 +1,5 @@
-//Задана матрица неотрицательных чисел. Посчитать сумму элементов в каждом столбце. Определить, какой 
-//столбец содержит максимальную сумму.
+п»ї//Р—Р°РґР°РЅР° РјР°С‚СЂРёС†Р° РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… С‡РёСЃРµР». РџРѕСЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјСѓ СЌР»РµРјРµРЅС‚РѕРІ РІ РєР°Р¶РґРѕРј СЃС‚РѕР»Р±С†Рµ. РћРїСЂРµРґРµР»РёС‚СЊ, РєР°РєРѕР№ 
+//СЃС‚РѕР»Р±РµС† СЃРѕРґРµСЂР¶РёС‚ РјР°РєСЃРёРјР°Р»СЊРЅСѓСЋ СЃСѓРјРјСѓ.
 package com.artempvn.m_2_twoDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -33,7 +33,7 @@ public static void function(int[][] n){
 	for (int i=0;i<x.length;i++){
 		if(max<x[i]) max=x[i];
 	}
-	System.out.print("Столбец, содержащий максимальную сумму: ");
+	System.out.print("РЎС‚РѕР»Р±РµС†, СЃРѕРґРµСЂР¶Р°С‰РёР№ РјР°РєСЃРёРјР°Р»СЊРЅСѓСЋ СЃСѓРјРјСѓ: ");
 	for(int i=0;i<x.length;i++){
 		if (x[i]==max){
 			System.out.print(i+" ");
@@ -44,9 +44,9 @@ public static void function(int[][] n){
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите количество строк  ");
+	System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє  ");
 	int n=in.nextInt();
-	System.out.print("Введите количество столбцов  ");
+	System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ  ");
 	int m=in.nextInt();
 	int[][]a=massiveCreate2(n,m);
 	print(a);

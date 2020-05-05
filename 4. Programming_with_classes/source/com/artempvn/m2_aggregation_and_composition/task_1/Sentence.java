@@ -1,4 +1,4 @@
-package com.artempvn.m2_aggregation_and_composition.task_1;
+﻿package com.artempvn.m2_aggregation_and_composition.task_1;
 class  Sentence {
 private String sentence="";
 public Sentence(Word...words){

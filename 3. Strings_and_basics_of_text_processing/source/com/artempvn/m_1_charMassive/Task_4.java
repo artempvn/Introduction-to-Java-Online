@@ -1,4 +1,4 @@
-//В строке найти количество чисел.
+п»ї//Р’ СЃС‚СЂРѕРєРµ РЅР°Р№С‚Рё РєРѕР»РёС‡РµСЃС‚РІРѕ С‡РёСЃРµР».
 package com.artempvn.m_1_charMassive;
 import java.util.Scanner;
 import java.util.*;
@@ -66,13 +66,13 @@ for (int i=1;i<ch.length;i++){
 	if ((ch[0]>=48&&ch[0]<=57)){
 	count++;
 }
-System.out.println("Количество чисел в строке: "+count);
+System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ С‡РёСЃРµР» РІ СЃС‚СЂРѕРєРµ: "+count);
 	}
 
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите количество элементов строки:  ");
+System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃС‚СЂРѕРєРё:  ");
 	int n=in.nextInt();
 	String a=massiveCreate(n);
 print(a);

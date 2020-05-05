@@ -1,4 +1,4 @@
-//Проверить, является ли заданное слово палиндромом.
+п»ї//РџСЂРѕРІРµСЂРёС‚СЊ, СЏРІР»СЏРµС‚СЃСЏ Р»Рё Р·Р°РґР°РЅРЅРѕРµ СЃР»РѕРІРѕ РїР°Р»РёРЅРґСЂРѕРјРѕРј.
 package com.artempvn.m_2_String;
 import java.util.Scanner;
 import java.util.*;
@@ -27,14 +27,14 @@ if (a.compareToIgnoreCase(a1)==0){
 	pal=true;
 }
 if (pal){
-System.out.printf("Слово %s является палиндромом \n", a);	
-} else System.out.printf("Слово %s не является палиндромом \n", a);	
+System.out.printf("РЎР»РѕРІРѕ %s СЏРІР»СЏРµС‚СЃСЏ РїР°Р»РёРЅРґСЂРѕРјРѕРј \n", a);	
+} else System.out.printf("РЎР»РѕРІРѕ %s РЅРµ СЏРІР»СЏРµС‚СЃСЏ РїР°Р»РёРЅРґСЂРѕРјРѕРј \n", a);	
 return pal;
 	}
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите слово:  ");
+System.out.print("Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ:  ");
 	String a=in.nextLine();
 function(a);
 	}

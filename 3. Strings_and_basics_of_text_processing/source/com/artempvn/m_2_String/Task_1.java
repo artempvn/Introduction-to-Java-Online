@@ -1,4 +1,4 @@
-//Дан текст (строка). Найдите наибольшее количество подряд идущих пробелов в нем.
+п»ї//Р”Р°РЅ С‚РµРєСЃС‚ (СЃС‚СЂРѕРєР°). РќР°Р№РґРёС‚Рµ РЅР°РёР±РѕР»СЊС€РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРґСЂСЏРґ РёРґСѓС‰РёС… РїСЂРѕР±РµР»РѕРІ РІ РЅРµРј.
 package com.artempvn.m_2_String;
 import java.util.Scanner;
 import java.util.*;
@@ -66,11 +66,11 @@ return max;
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите количество элементов строки:  ");
+System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃС‚СЂРѕРєРё:  ");
 	int n=in.nextInt();
 	String a=massiveCreate(n);
 print(a);
-System.out.println("Наибольшее количество подряд идущих пробелов:  ");
+System.out.println("РќР°РёР±РѕР»СЊС€РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРґСЂСЏРґ РёРґСѓС‰РёС… РїСЂРѕР±РµР»РѕРІ:  ");
 function(a);
 	}	
 }

@@ -1,5 +1,5 @@
-//Даны дроби (p(1)/q(1)), (p(2)/q(2)),...,(p(n)/q(n)) (p(i) и q(i)- натуральные). 
-//Составить программу, которая приводит эти дроби к общему знаменателю и упорядочивает их в порядке возрастания.
+п»ї//Р”Р°РЅС‹ РґСЂРѕР±Рё (p(1)/q(1)), (p(2)/q(2)),...,(p(n)/q(n)) (p(i) Рё q(i)- РЅР°С‚СѓСЂР°Р»СЊРЅС‹Рµ). 
+//РЎРѕСЃС‚Р°РІРёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ РїСЂРёРІРѕРґРёС‚ СЌС‚Рё РґСЂРѕР±Рё Рє РѕР±С‰РµРјСѓ Р·РЅР°РјРµРЅР°С‚РµР»СЋ Рё СѓРїРѕСЂСЏРґРѕС‡РёРІР°РµС‚ РёС… РІ РїРѕСЂСЏРґРєРµ РІРѕР·СЂР°СЃС‚Р°РЅРёСЏ.
 package com.artempvn.m_3_sortingArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -122,13 +122,13 @@ for (int i=0; i<b.length;i++){
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите количество дробей:  ");
+System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РґСЂРѕР±РµР№:  ");
 	int n=in.nextInt();
 	int[]a=massiveCreate(n);
 	int[]b=massiveCreate(n);
 	print(a,b);
 	optim(a,b);
-System.out.println("НОК: "+function(b,simple(b)));
+System.out.println("РќРћРљ: "+function(b,simple(b)));
 function1(a,b,function(b,simple(b)));
 Arrays.sort(a);
 print(a,b);

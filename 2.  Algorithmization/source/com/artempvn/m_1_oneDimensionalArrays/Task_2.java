@@ -1,5 +1,5 @@
-//Дана последовательность действительных чисел  а1 ,а2 ,..., а(n).  Заменить все ее члены, большие данного Z, этим 
-//числом. Подсчитать количество замен.
+п»ї//Р”Р°РЅР° РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹С… С‡РёСЃРµР»  Р°1 ,Р°2 ,..., Р°(n).  Р—Р°РјРµРЅРёС‚СЊ РІСЃРµ РµРµ С‡Р»РµРЅС‹, Р±РѕР»СЊС€РёРµ РґР°РЅРЅРѕРіРѕ Z, СЌС‚РёРј 
+//С‡РёСЃР»РѕРј. РџРѕРґСЃС‡РёС‚Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РјРµРЅ.
 package com.artempvn.m_1_oneDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -20,9 +20,9 @@ for(int i=0;i<s.length;i++){
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите n ");
+	System.out.print("Р’РІРµРґРёС‚Рµ n ");
 	int n=in.nextInt();
-	System.out.print("Введите Z ");
+	System.out.print("Р’РІРµРґРёС‚Рµ Z ");
 	Z=in.nextInt();
 	System.out.println();
 	double[]A=new double[n];
@@ -30,7 +30,7 @@ public static void main (String [] args) {
 		A[i]=pow(2,i);
 	}
 	System.out.println(Arrays.toString(A));
-		System.out.println("Число замен "+total(A));
+		System.out.println("Р§РёСЃР»Рѕ Р·Р°РјРµРЅ "+total(A));
 		System.out.println(Arrays.toString(A));
 	}
 	

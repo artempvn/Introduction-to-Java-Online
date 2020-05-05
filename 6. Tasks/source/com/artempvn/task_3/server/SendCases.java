@@ -1,4 +1,4 @@
-package com.artempvn.task_3.server;
+п»їpackage com.artempvn.task_3.server;
 import java.util.*;
 import java.io.*;
 import java.nio.file.*;
@@ -15,7 +15,7 @@ serverSock=new ServerSocket(5005);
 	String cases=ArchiveServer.read("cases");
 	PrintWriter writer=new PrintWriter(sock.getOutputStream());
 	writer.println(cases);
-	System.out.println("Отправлен список дел");
+	System.out.println("РћС‚РїСЂР°РІР»РµРЅ СЃРїРёСЃРѕРє РґРµР»");
 	writer.close();
 	sock.close();
 	}

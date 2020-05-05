@@ -1,4 +1,4 @@
-package com.artempvn.task_4;
+п»їpackage com.artempvn.task_4;
 class Warehouse {
 private	int cargo;
 private	int capacity;	
@@ -20,7 +20,7 @@ boolean isCargo=false;
 	if(cargo>0){
 		isCargo=true;
 		cargo--;
-		System.out.println("Контейнер отправлен на корабль. На складе осталось "+cargo+" контейнеров");	
+		System.out.println("РљРѕРЅС‚РµР№РЅРµСЂ РѕС‚РїСЂР°РІР»РµРЅ РЅР° РєРѕСЂР°Р±Р»СЊ. РќР° СЃРєР»Р°РґРµ РѕСЃС‚Р°Р»РѕСЃСЊ "+cargo+" РєРѕРЅС‚РµР№РЅРµСЂРѕРІ");	
 	} 	
 	return isCargo;
 }	
@@ -30,7 +30,7 @@ boolean isCargo=false;
 	if(cargo<capacity){
 		isCargo=true;
 		cargo++;
-		System.out.println("Контейнер получен. На складе "+cargo+" контейнеров");	
+		System.out.println("РљРѕРЅС‚РµР№РЅРµСЂ РїРѕР»СѓС‡РµРЅ. РќР° СЃРєР»Р°РґРµ "+cargo+" РєРѕРЅС‚РµР№РЅРµСЂРѕРІ");	
 	} 	
 	return isCargo;
 }

@@ -1,5 +1,5 @@
-//Дано  натуральное  число  N.  Написать  метод(методы)  для  формирования  массива,  элементами  которого 
-//являются цифры числа N.
+п»ї//Р”Р°РЅРѕ  РЅР°С‚СѓСЂР°Р»СЊРЅРѕРµ  С‡РёСЃР»Рѕ  N.  РќР°РїРёСЃР°С‚СЊ  РјРµС‚РѕРґ(РјРµС‚РѕРґС‹)  РґР»СЏ  С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ  РјР°СЃСЃРёРІР°,  СЌР»РµРјРµРЅС‚Р°РјРё  РєРѕС‚РѕСЂРѕРіРѕ 
+//СЏРІР»СЏСЋС‚СЃСЏ С†РёС„СЂС‹ С‡РёСЃР»Р° N.
 package com.artempvn.m_4_decomposition;
 import java.util.Scanner;
 import java.util.*;
@@ -40,7 +40,7 @@ return b;
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-	System.out.print("Введите число:  ");
+	System.out.print("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ:  ");
 	int a=in.nextInt();	
 	function1(a);
 	}

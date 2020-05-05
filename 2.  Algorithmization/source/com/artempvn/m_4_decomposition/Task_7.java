@@ -1,4 +1,4 @@
-//Написать метод(методы) для вычисления суммы факториалов всех нечетных чисел от 1 до 9.
+п»ї//РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹) РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ СЃСѓРјРјС‹ С„Р°РєС‚РѕСЂРёР°Р»РѕРІ РІСЃРµС… РЅРµС‡РµС‚РЅС‹С… С‡РёСЃРµР» РѕС‚ 1 РґРѕ 9.
 package com.artempvn.m_4_decomposition;
 import java.util.Scanner;
 import java.util.*;
@@ -19,9 +19,9 @@ return sum;
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите число:  ");
+System.out.print("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ:  ");
 	int n=in.nextInt();
-	System.out.println("Сумма факториалов нечетных чисел до "+n+" составляет "+function(n));
+	System.out.println("РЎСѓРјРјР° С„Р°РєС‚РѕСЂРёР°Р»РѕРІ РЅРµС‡РµС‚РЅС‹С… С‡РёСЃРµР» РґРѕ "+n+" СЃРѕСЃС‚Р°РІР»СЏРµС‚ "+function(n));
 
 	}
 	

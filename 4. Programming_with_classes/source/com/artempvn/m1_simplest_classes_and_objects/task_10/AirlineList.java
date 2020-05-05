@@ -1,12 +1,12 @@
-/*
-*Создать класс Airline, спецификация которого приведена ниже. Определить конструкторы,  set- и get- методы 
-*и метод  toString(). Создать второй класс, агрегирующий массив типа  Airline, с подходящими конструкторами и 
-*методами. Задать критерии выбора данных и вывести эти данные на консоль. 
-*Airline: пункт назначения, номер рейса, тип самолета, время вылета, дни недели. 
-*Найти и вывести: 
-*a) список рейсов для заданного пункта назначения; 
-*b) список рейсов для заданного дня недели; 
-*c) список рейсов для заданного дня недели, время вылета для которых больше заданного.
+п»ї/*
+*РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ Airline, СЃРїРµС†РёС„РёРєР°С†РёСЏ РєРѕС‚РѕСЂРѕРіРѕ РїСЂРёРІРµРґРµРЅР° РЅРёР¶Рµ. РћРїСЂРµРґРµР»РёС‚СЊ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹,  set- Рё get- РјРµС‚РѕРґС‹ 
+*Рё РјРµС‚РѕРґ  toString(). РЎРѕР·РґР°С‚СЊ РІС‚РѕСЂРѕР№ РєР»Р°СЃСЃ, Р°РіСЂРµРіРёСЂСѓСЋС‰РёР№ РјР°СЃСЃРёРІ С‚РёРїР°  Airline, СЃ РїРѕРґС…РѕРґСЏС‰РёРјРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°РјРё Рё 
+*РјРµС‚РѕРґР°РјРё. Р—Р°РґР°С‚СЊ РєСЂРёС‚РµСЂРёРё РІС‹Р±РѕСЂР° РґР°РЅРЅС‹С… Рё РІС‹РІРµСЃС‚Рё СЌС‚Рё РґР°РЅРЅС‹Рµ РЅР° РєРѕРЅСЃРѕР»СЊ. 
+*Airline: РїСѓРЅРєС‚ РЅР°Р·РЅР°С‡РµРЅРёСЏ, РЅРѕРјРµСЂ СЂРµР№СЃР°, С‚РёРї СЃР°РјРѕР»РµС‚Р°, РІСЂРµРјСЏ РІС‹Р»РµС‚Р°, РґРЅРё РЅРµРґРµР»Рё. 
+*РќР°Р№С‚Рё Рё РІС‹РІРµСЃС‚Рё: 
+*a) СЃРїРёСЃРѕРє СЂРµР№СЃРѕРІ РґР»СЏ Р·Р°РґР°РЅРЅРѕРіРѕ РїСѓРЅРєС‚Р° РЅР°Р·РЅР°С‡РµРЅРёСЏ; 
+*b) СЃРїРёСЃРѕРє СЂРµР№СЃРѕРІ РґР»СЏ Р·Р°РґР°РЅРЅРѕРіРѕ РґРЅСЏ РЅРµРґРµР»Рё; 
+*c) СЃРїРёСЃРѕРє СЂРµР№СЃРѕРІ РґР»СЏ Р·Р°РґР°РЅРЅРѕРіРѕ РґРЅСЏ РЅРµРґРµР»Рё, РІСЂРµРјСЏ РІС‹Р»РµС‚Р° РґР»СЏ РєРѕС‚РѕСЂС‹С… Р±РѕР»СЊС€Рµ Р·Р°РґР°РЅРЅРѕРіРѕ.
 */
 package com.artempvn.m1_simplest_classes_and_objects.task_10;
 import java.util.*;
@@ -14,8 +14,8 @@ import static java.lang.Math.*;
 public class AirlineList {
 private ArrayList<Airline> arln;
 
-public  void function (String destination){ //Список рейсов для пункта назначения
-System.out.println("Список рейсов в "+destination+":");
+public  void function (String destination){ //РЎРїРёСЃРѕРє СЂРµР№СЃРѕРІ РґР»СЏ РїСѓРЅРєС‚Р° РЅР°Р·РЅР°С‡РµРЅРёСЏ
+System.out.println("РЎРїРёСЃРѕРє СЂРµР№СЃРѕРІ РІ "+destination+":");
 for(Airline i:arln)	{
 	if (i.getDestination().equals(destination)){
 System.out.println(i.getNumber());
@@ -23,8 +23,8 @@ System.out.println(i.getNumber());
 }
 }
 
-public  void function1 (String days){ //Список рейсов в день недели
-System.out.println("Список рейсов по "+days+":");
+public  void function1 (String days){ //РЎРїРёСЃРѕРє СЂРµР№СЃРѕРІ РІ РґРµРЅСЊ РЅРµРґРµР»Рё
+System.out.println("РЎРїРёСЃРѕРє СЂРµР№СЃРѕРІ РїРѕ "+days+":");
 for(Airline i:arln)	{
 	if (i.getDays().contains(days)){
 System.out.println(i.getNumber());
@@ -32,8 +32,8 @@ System.out.println(i.getNumber());
 }
 }
 
-public  void function2 (String days, String departureTime){ //Список рейсов в день недели после указанного времени
-System.out.println("Список рейсов по "+days+" после "+departureTime+":");
+public  void function2 (String days, String departureTime){ //РЎРїРёСЃРѕРє СЂРµР№СЃРѕРІ РІ РґРµРЅСЊ РЅРµРґРµР»Рё РїРѕСЃР»Рµ СѓРєР°Р·Р°РЅРЅРѕРіРѕ РІСЂРµРјРµРЅРё
+System.out.println("РЎРїРёСЃРѕРє СЂРµР№СЃРѕРІ РїРѕ "+days+" РїРѕСЃР»Рµ "+departureTime+":");
 for(Airline i:arln)	{
 	if (i.getDays().contains(days)&&i.getDepartureTime().compareTo(departureTime)>0){
 System.out.println(i.getNumber());
@@ -42,7 +42,7 @@ System.out.println(i.getNumber());
 }
 
 public static void main (String [] args) {
-String b="Москва/B2 975/Boeing 737-300/07:50/ПН ЧТ\nСтамбул/B2 783/Embraer 195/08:00/ВТ СБ\nМосква/B2 957/Embraer 175/08:45/СР ПТ ВС\nТаллинн/B2 805/Embraer 175/10:30/ВТ\nАмстердам/B2 867/Embraer 175/10:30/ПН ЧТ СБ\n";
+String b="РњРѕСЃРєРІР°/B2 975/Boeing 737-300/07:50/РџРќ Р§Рў\nРЎС‚Р°РјР±СѓР»/B2 783/Embraer 195/08:00/Р’Рў РЎР‘\nРњРѕСЃРєРІР°/B2 957/Embraer 175/08:45/РЎР  РџРў Р’РЎ\nРўР°Р»Р»РёРЅРЅ/B2 805/Embraer 175/10:30/Р’Рў\nРђРјСЃС‚РµСЂРґР°Рј/B2 867/Embraer 175/10:30/РџРќ Р§Рў РЎР‘\n";
 String[] a=b.split("\n");
 AirlineList c=new AirlineList();		
 c.arln=new ArrayList<Airline>();
@@ -52,15 +52,15 @@ for (int i=0;i<a.length;i++){
 }
 
 Scanner in = new Scanner(System.in);
-System.out.println("Введите пункт назначения");
+System.out.println("Р’РІРµРґРёС‚Рµ РїСѓРЅРєС‚ РЅР°Р·РЅР°С‡РµРЅРёСЏ");
 String destination=in.nextLine();
 c.function(destination);
-System.out.println("Введите день недели");
+System.out.println("Р’РІРµРґРёС‚Рµ РґРµРЅСЊ РЅРµРґРµР»Рё");
 String days=in.nextLine();
 c.function1(days);
-System.out.println("Введите день недели");
+System.out.println("Р’РІРµРґРёС‚Рµ РґРµРЅСЊ РЅРµРґРµР»Рё");
 days=in.nextLine();
-System.out.println("Введите время");
+System.out.println("Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ");
 String departureTime=in.nextLine();
 c.function2(days,departureTime);
 }

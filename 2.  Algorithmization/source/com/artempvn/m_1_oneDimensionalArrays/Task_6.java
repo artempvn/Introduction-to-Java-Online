@@ -1,5 +1,5 @@
-//Задана  последовательность  N  вещественных  чисел.  Вычислить  сумму  чисел,  порядковые  номера  которых 
-//являются простыми числами.
+п»ї//Р—Р°РґР°РЅР°  РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ  N  РІРµС‰РµСЃС‚РІРµРЅРЅС‹С…  С‡РёСЃРµР».  Р’С‹С‡РёСЃР»РёС‚СЊ  СЃСѓРјРјСѓ  С‡РёСЃРµР»,  РїРѕСЂСЏРґРєРѕРІС‹Рµ  РЅРѕРјРµСЂР°  РєРѕС‚РѕСЂС‹С… 
+//СЏРІР»СЏСЋС‚СЃСЏ РїСЂРѕСЃС‚С‹РјРё С‡РёСЃР»Р°РјРё.
 package com.artempvn.m_1_oneDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -50,7 +50,7 @@ public static double findSum(double[] n,int[]m){
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите N ");
+	System.out.print("Р’РІРµРґРёС‚Рµ N ");
 	int N=in.nextInt();
 	System.out.println();
 	double []A=massiveCreate(N);

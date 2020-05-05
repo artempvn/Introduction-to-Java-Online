@@ -1,4 +1,4 @@
-package com.artempvn.m2_aggregation_and_composition.task_4;
+п»їpackage com.artempvn.m2_aggregation_and_composition.task_4;
 import java.util.*;
 class  BankAccount { 
 private int id;
@@ -31,12 +31,12 @@ this.frozen=frozen;
 public void addMoney(double money){
 	if (!frozen){
 		this.money+=money;
-	} else System.out.println("Счет №"+id+" заблокирован.");
+	} else System.out.println("РЎС‡РµС‚ в„–"+id+" Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ.");
 }
 public void takeMoney(double money){
 	if (!frozen){
 		this.money-=money;
-	} else System.out.println("Счет №"+id+" заблокирован.");
+	} else System.out.println("РЎС‡РµС‚ в„–"+id+" Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ.");
 }
 }
 

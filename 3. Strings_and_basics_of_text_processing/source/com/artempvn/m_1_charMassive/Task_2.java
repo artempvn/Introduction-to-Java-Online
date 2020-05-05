@@ -1,4 +1,4 @@
-//Замените в строке все вхождения 'word' на 'letter'.
+п»ї//Р—Р°РјРµРЅРёС‚Рµ РІ СЃС‚СЂРѕРєРµ РІСЃРµ РІС…РѕР¶РґРµРЅРёСЏ 'word' РЅР° 'letter'.
 package com.artempvn.m_1_charMassive;
 import java.util.Scanner;
 import java.util.*;
@@ -78,11 +78,11 @@ print(a);
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите количество элементов строки:  ");
+System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃС‚СЂРѕРєРё:  ");
 	int n=in.nextInt();
 	String a=massiveCreate(n);
 print(a);
-System.out.println("После замены word на letter:  ");
+System.out.println("РџРѕСЃР»Рµ Р·Р°РјРµРЅС‹ word РЅР° letter:  ");
 function(a);
 	}
 	

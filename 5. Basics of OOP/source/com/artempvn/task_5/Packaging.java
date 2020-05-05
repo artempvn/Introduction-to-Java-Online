@@ -1,6 +1,6 @@
-package com.artempvn.task_5;
+п»їpackage com.artempvn.task_5;
 enum Packaging {
-p1("Пленка"),	p2("Ткань"),	p3("Бумага"),	p4("Корзина"),	p5("Лента");
+p1("РџР»РµРЅРєР°"),	p2("РўРєР°РЅСЊ"),	p3("Р‘СѓРјР°РіР°"),	p4("РљРѕСЂР·РёРЅР°"),	p5("Р›РµРЅС‚Р°");
 
 private String name;
 
@@ -14,7 +14,7 @@ public String toString() {
        return name;
 }
 public static void print (){
-	System.out.print("Возможные варианты: ");
+	System.out.print("Р’РѕР·РјРѕР¶РЅС‹Рµ РІР°СЂРёР°РЅС‚С‹: ");
 	for (Packaging p:Packaging.values()){
 		System.out.print(p+" ");
 	}

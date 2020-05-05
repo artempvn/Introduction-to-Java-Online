@@ -1,4 +1,4 @@
-//Дан массив названий переменных в camelCase. Преобразовать названия в snake_case.
+п»ї//Р”Р°РЅ РјР°СЃСЃРёРІ РЅР°Р·РІР°РЅРёР№ РїРµСЂРµРјРµРЅРЅС‹С… РІ camelCase. РџСЂРµРѕР±СЂР°Р·РѕРІР°С‚СЊ РЅР°Р·РІР°РЅРёСЏ РІ snake_case.
 package com.artempvn.m_1_charMassive;
 import java.util.Scanner;
 import java.util.*;
@@ -53,7 +53,7 @@ print(a);
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите количество строк:  ");
+System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє:  ");
 	int n=in.nextInt();
 	String []a=massiveCreate(n);
 	System.out.print("camelCase:  ");

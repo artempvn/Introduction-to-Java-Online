@@ -1,4 +1,4 @@
-package com.artempvn.task_1;
+ï»¿package com.artempvn.task_1;
 import java.util.*;
 import java.nio.file.*;
 class  File { 
@@ -17,7 +17,7 @@ public File(Directory dir, String name){
 path=Paths.get(dir.getPath()+"\\"+name);
 Files.createFile(path);
 	} catch (Exception ex){
-		System.err.println("Ôàéë óæå ñîçäàí");
+		System.err.println("â€˜Ğ°Ğ¹Ğ» ÑƒĞ¶Ğµ ÑĞ¾Ğ·Ğ´Ğ°Ğ½");
 	}
 }
 }

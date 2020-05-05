@@ -1,4 +1,4 @@
-package com.artempvn.m1_simplest_classes_and_objects.task_8;
+п»їpackage com.artempvn.m1_simplest_classes_and_objects.task_8;
 class Customer {
 private int id;
 private String surname;
@@ -72,7 +72,7 @@ public int getBankAcc(){
 	return bankAcc;
 }
  public String toString() {
-        return "id "+id+"; ФИО: "+surname+" "+name+" "+secondName+"; адрес: "+adress+"; номер кредитной карточки: "+creditNum+"; номер банковского счета: "+bankAcc+"\n";
+        return "id "+id+"; Р¤РРћ: "+surname+" "+name+" "+secondName+"; Р°РґСЂРµСЃ: "+adress+"; РЅРѕРјРµСЂ РєСЂРµРґРёС‚РЅРѕР№ РєР°СЂС‚РѕС‡РєРё: "+creditNum+"; РЅРѕРјРµСЂ Р±Р°РЅРєРѕРІСЃРєРѕРіРѕ СЃС‡РµС‚Р°: "+bankAcc+"\n";
     }
 }
 

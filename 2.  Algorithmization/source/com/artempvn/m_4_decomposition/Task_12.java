@@ -1,5 +1,5 @@
-//Даны  натуральные числа К  и  N.  Написать метод(методы)  формирования массива  А, элементами  которого 
-//являются числа, сумма цифр которых равна К и которые не большее N.
+п»ї//Р”Р°РЅС‹  РЅР°С‚СѓСЂР°Р»СЊРЅС‹Рµ С‡РёСЃР»Р° Рљ  Рё  N.  РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹)  С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РјР°СЃСЃРёРІР°  Рђ, СЌР»РµРјРµРЅС‚Р°РјРё  РєРѕС‚РѕСЂРѕРіРѕ 
+//СЏРІР»СЏСЋС‚СЃСЏ С‡РёСЃР»Р°, СЃСѓРјРјР° С†РёС„СЂ РєРѕС‚РѕСЂС‹С… СЂР°РІРЅР° Рљ Рё РєРѕС‚РѕСЂС‹Рµ РЅРµ Р±РѕР»СЊС€РµРµ N.
 package com.artempvn.m_4_decomposition;
 import java.util.Scanner;
 import java.util.*;
@@ -67,9 +67,9 @@ return a;
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-	System.out.print("Введите K:  ");
+	System.out.print("Р’РІРµРґРёС‚Рµ K:  ");
 	int k=in.nextInt();	
-	System.out.print("Введите N:  ");
+	System.out.print("Р’РІРµРґРёС‚Рµ N:  ");
 	int n=in.nextInt();
 	print(function2(k,n));
 	}

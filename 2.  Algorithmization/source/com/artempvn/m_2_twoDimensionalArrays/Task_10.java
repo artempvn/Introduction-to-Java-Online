@@ -1,4 +1,4 @@
-//Найти положительные элементы главной диагонали квадратной матрицы.
+//РќР°Р№С‚Рё РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ РіР»Р°РІРЅРѕР№ РґРёР°РіРѕРЅР°Р»Рё РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹.
 package com.artempvn.m_2_twoDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -22,7 +22,7 @@ public static int[][] massiveCreate2 (int n,int m){
 		return a;
 	}
 public static void function(int[][] n){
-	System.out.print("Положительные элементы главной диагонали: ");
+	System.out.print("РџРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ РіР»Р°РІРЅРѕР№ РґРёР°РіРѕРЅР°Р»Рё: ");
 	for (int i=0;i<n.length;i++){
 		if (n[i][i]>0){
 			System.out.print(n[i][i]+" ");
@@ -33,7 +33,7 @@ public static void function(int[][] n){
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите порядок матрицы  ");
+	System.out.print("Р’РІРµРґРёС‚Рµ РїРѕСЂСЏРґРѕРє РјР°С‚СЂРёС†С‹  ");
 	int n=in.nextInt();
 	int[][]a=massiveCreate2(n,n);
 	print(a);

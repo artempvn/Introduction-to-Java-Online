@@ -1,4 +1,4 @@
-//Написать метод(методы), проверяющий, являются ли данные три числа взаимно простыми.
+п»ї//РЊР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹), РїСЂРѕРІРµСЂВ¤СЋС‰РёР№, В¤РІР»В¤СЋС‚СЃВ¤ Р»Рё РґР°РЅРЅС‹Рµ С‚СЂРё С‡РёСЃР»Р° РІР·Р°РёРјРЅРѕ РїСЂРѕСЃС‚С‹РјРё.
 package com.artempvn.m_4_decomposition;
 import java.util.Scanner;
 import java.util.*;
@@ -101,18 +101,18 @@ return nod;
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите первое число:  ");
+System.out.print("В¬РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ:  ");
 	int n=in.nextInt();
-System.out.print("Введите второе число:  ");
+System.out.print("В¬РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ:  ");
 	int m=in.nextInt();
-	System.out.print("Введите третье число:  ");
+	System.out.print("В¬РІРµРґРёС‚Рµ С‚СЂРµС‚СЊРµ С‡РёСЃР»Рѕ:  ");
 	int l=in.nextInt();
 	int[]a=massiveCreate(n,m,l);
 	print(a);
 if (function(a)!=1) {
-	System.out.println("Числа не взаимно простые");
+	System.out.println("вЂћРёСЃР»Р° РЅРµ РІР·Р°РёРјРЅРѕ РїСЂРѕСЃС‚С‹Рµ");
 } else {
-	System.out.println("Числа взаимно простые");
+	System.out.println("вЂћРёСЃР»Р° РІР·Р°РёРјРЅРѕ РїСЂРѕСЃС‚С‹Рµ");
 }
 	}
 	

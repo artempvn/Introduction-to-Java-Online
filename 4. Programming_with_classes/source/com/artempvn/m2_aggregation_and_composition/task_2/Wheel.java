@@ -1,4 +1,4 @@
-package com.artempvn.m2_aggregation_and_composition.task_2;
+﻿package com.artempvn.m2_aggregation_and_composition.task_2;
 class  Wheel {
 private String tyreSize;
 public String getTyreSize(){

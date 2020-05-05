@@ -1,4 +1,4 @@
-//В массив A [N] занесены натуральные числа. Найти сумму тех элементов, которые кратны данному К.
+п»ї//Р’ РјР°СЃСЃРёРІ A [N] Р·Р°РЅРµСЃРµРЅС‹ РЅР°С‚СѓСЂР°Р»СЊРЅС‹Рµ С‡РёСЃР»Р°. РќР°Р№С‚Рё СЃСѓРјРјСѓ С‚РµС… СЌР»РµРјРµРЅС‚РѕРІ, РєРѕС‚РѕСЂС‹Рµ РєСЂР°С‚РЅС‹ РґР°РЅРЅРѕРјСѓ Рљ.
 package com.artempvn.m_1_oneDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -18,9 +18,9 @@ for(int i=0;i<s.length;i++){
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите N ");
+	System.out.print("Р’РІРµРґРёС‚Рµ N ");
 	int N=in.nextInt();
-	System.out.print("Введите K ");
+	System.out.print("Р’РІРµРґРёС‚Рµ K ");
 	K=in.nextInt();
 	System.out.println();	
 	A=new int[N];
@@ -28,7 +28,7 @@ public static void main (String [] args) {
 		A[i]=(int)(random()*100);
 	}
 	System.out.println(Arrays.toString(A));
-		System.out.println("Сумма элементов, которые кратны "+K+" составляет "+total(A));
+		System.out.println("РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ, РєРѕС‚РѕСЂС‹Рµ РєСЂР°С‚РЅС‹ "+K+" СЃРѕСЃС‚Р°РІР»СЏРµС‚ "+total(A));
 	}
 	
 }

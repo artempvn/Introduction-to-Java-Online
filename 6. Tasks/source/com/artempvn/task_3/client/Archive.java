@@ -1,12 +1,12 @@
-/*
-*создайте клиент-серверное приложение “Архив”.
-*Общие требования к заданию:
-•  В архиве хранятся Дела (например, студентов). Архив находится на сервере.
-•  Клиент, в зависимости от прав, может запросить дело на просмотр, внести в 
-*него изменения, или создать новое дело.
-*Требования к коду лабораторной работы:
-•  Для реализации сетевого соединения используйте сокеты.
-•  Формат хранения данных на сервере – xml-файлы.
+п»ї/*
+*СЃРѕР·РґР°Р№С‚Рµ РєР»РёРµРЅС‚-СЃРµСЂРІРµСЂРЅРѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ вЂњРђСЂС…РёРІвЂќ.
+*РћР±С‰РёРµ С‚СЂРµР±РѕРІР°РЅРёСЏ Рє Р·Р°РґР°РЅРёСЋ:
+вЂў  Р’ Р°СЂС…РёРІРµ С…СЂР°РЅСЏС‚СЃСЏ Р”РµР»Р° (РЅР°РїСЂРёРјРµСЂ, СЃС‚СѓРґРµРЅС‚РѕРІ). РђСЂС…РёРІ РЅР°С…РѕРґРёС‚СЃСЏ РЅР° СЃРµСЂРІРµСЂРµ.
+вЂў  РљР»РёРµРЅС‚, РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РїСЂР°РІ, РјРѕР¶РµС‚ Р·Р°РїСЂРѕСЃРёС‚СЊ РґРµР»Рѕ РЅР° РїСЂРѕСЃРјРѕС‚СЂ, РІРЅРµСЃС‚Рё РІ 
+*РЅРµРіРѕ РёР·РјРµРЅРµРЅРёСЏ, РёР»Рё СЃРѕР·РґР°С‚СЊ РЅРѕРІРѕРµ РґРµР»Рѕ.
+*РўСЂРµР±РѕРІР°РЅРёСЏ Рє РєРѕРґСѓ Р»Р°Р±РѕСЂР°С‚РѕСЂРЅРѕР№ СЂР°Р±РѕС‚С‹:
+вЂў  Р”Р»СЏ СЂРµР°Р»РёР·Р°С†РёРё СЃРµС‚РµРІРѕРіРѕ СЃРѕРµРґРёРЅРµРЅРёСЏ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃРѕРєРµС‚С‹.
+вЂў  Р¤РѕСЂРјР°С‚ С…СЂР°РЅРµРЅРёСЏ РґР°РЅРЅС‹С… РЅР° СЃРµСЂРІРµСЂРµ вЂ“ xml-С„Р°Р№Р»С‹.
 */
 package com.artempvn.task_3.client;
 import java.util.*;
@@ -216,7 +216,7 @@ sendCasesList(message);
 
 public void login(){
 clear();
-System.out.println("Архив дел студентов");
+System.out.println("РђСЂС…РёРІ РґРµР» СЃС‚СѓРґРµРЅС‚РѕРІ");
 List<String> l=new ArrayList<String>();
 	String next="";
 	boolean findUser=false;
@@ -224,29 +224,29 @@ List<String> l=new ArrayList<String>();
 	do{
 	do{
 	if (usersList.size()==0){
-	System.out.println("Создание нового администратора");
+	System.out.println("РЎРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°");
 	addUser("true");
 	}	
-	System.out.printf("1.Авторизация\n2.Создание нового пользователя\n");
+	System.out.printf("1.РђРІС‚РѕСЂРёР·Р°С†РёСЏ\n2.РЎРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ\n");
 	next=in.next();
 	}while (!next.equals("1")&&!next.equals("2"));
 	if (next.equals("1")){
-		System.out.printf("Введите логин\n");
+		System.out.printf("Р’РІРµРґРёС‚Рµ Р»РѕРіРёРЅ\n");
 		next=in.next();
 		for (User u:usersList){
 			if(u.getLogin().equals(next)) {
 				findUser=true;
-				System.out.printf("Введите пароль\n");
+				System.out.printf("Р’РІРµРґРёС‚Рµ РїР°СЂРѕР»СЊ\n");
 				next=in.next();
 				if(u.getPassword().equals(next)){
 				pass=true;
 				currentUser=u;
-				System.out.printf("Добро пожаловать\n");
+				System.out.printf("Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ\n");
                 break;				
-				} else System.out.printf("Введен неверный пароль\n");
+				} else System.out.printf("Р’РІРµРґРµРЅ РЅРµРІРµСЂРЅС‹Р№ РїР°СЂРѕР»СЊ\n");
 			}
 		}
-		if (!findUser) System.out.printf("Такого пользователя не существует\n");	
+		if (!findUser) System.out.printf("РўР°РєРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚\n");	
 	} else addUser("false");
 } while(!pass);
 clear();
@@ -254,7 +254,7 @@ mainMenu();
 }
 
 public void addUser(String isAdmin){  
-System.out.println("Введите желаемый логин");
+System.out.println("Р’РІРµРґРёС‚Рµ Р¶РµР»Р°РµРјС‹Р№ Р»РѕРіРёРЅ");
 boolean incorrectLogin=false;
 String login=null;
 do {
@@ -262,28 +262,28 @@ incorrectLogin=false;
 login=in.next();
 for (User user:usersList){
 if(user.getLogin().equals(login)){
-	System.out.println("Такой пользователь уже создан. Введите другой логин");
+	System.out.println("РўР°РєРѕР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ СѓР¶Рµ СЃРѕР·РґР°РЅ. Р’РІРµРґРёС‚Рµ РґСЂСѓРіРѕР№ Р»РѕРіРёРЅ");
 	incorrectLogin=true;
 }
 }
 }while(incorrectLogin);
-System.out.println("Введите желаемый пароль");
+System.out.println("Р’РІРµРґРёС‚Рµ Р¶РµР»Р°РµРјС‹Р№ РїР°СЂРѕР»СЊ");
 String password=in.next();
 User u=new User(login,password,isAdmin);
 usersList.add(u);
 writeUsersXml();	
-System.out.printf("Пользователь %s успешно создан\n",login);
+System.out.printf("РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ %s СѓСЃРїРµС€РЅРѕ СЃРѕР·РґР°РЅ\n",login);
 }
 
 
 public void mainMenu(){
 clear();
-System.out.println("0.Обновить данные");
-System.out.println("1.Просмотр дел");	
-System.out.println("2.Смена пользователя");	
+System.out.println("0.РћР±РЅРѕРІРёС‚СЊ РґР°РЅРЅС‹Рµ");
+System.out.println("1.РџСЂРѕСЃРјРѕС‚СЂ РґРµР»");	
+System.out.println("2.РЎРјРµРЅР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ");	
 if (currentUser.getAdmin().equals("true")){
-System.out.println("3.Добавить дело");
-System.out.println("4.Добавить нового администратора");
+System.out.println("3.Р”РѕР±Р°РІРёС‚СЊ РґРµР»Рѕ");
+System.out.println("4.Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІРѕРіРѕ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°");
 }
 int choise=in.nextInt();
 switch(choise){
@@ -314,24 +314,24 @@ switch(choise){
 
 public void addCase(){ 
 clear(); 
-System.out.println("Введите факультет");
+System.out.println("Р’РІРµРґРёС‚Рµ С„Р°РєСѓР»СЊС‚РµС‚");
 String faculty=in.nextLine();
 faculty=in.nextLine();
-System.out.println("Введите группу");
+System.out.println("Р’РІРµРґРёС‚Рµ РіСЂСѓРїРїСѓ");
 String group=in.nextLine();
-System.out.println("Введите фамилию");
+System.out.println("Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ");
 String surname=in.nextLine();
-System.out.println("Введите имя");
+System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ");
 String name=in.nextLine();
-System.out.println("Введите отчество");
+System.out.println("Р’РІРµРґРёС‚Рµ РѕС‚С‡РµСЃС‚РІРѕ");
 String secondName=in.nextLine();
-System.out.println("Введите статус общежития (нуждается/не нуждается/проживает)");
+System.out.println("Р’РІРµРґРёС‚Рµ СЃС‚Р°С‚СѓСЃ РѕР±С‰РµР¶РёС‚РёСЏ (РЅСѓР¶РґР°РµС‚СЃСЏ/РЅРµ РЅСѓР¶РґР°РµС‚СЃСЏ/РїСЂРѕР¶РёРІР°РµС‚)");
 String dormitoryStatus="";
 do{
 dormitoryStatus=in.nextLine();	
-} while(!dormitoryStatus.equals("нуждается")&&!dormitoryStatus.equals("не нуждается")&&!dormitoryStatus.equals("проживает"));
+} while(!dormitoryStatus.equals("РЅСѓР¶РґР°РµС‚СЃСЏ")&&!dormitoryStatus.equals("РЅРµ РЅСѓР¶РґР°РµС‚СЃСЏ")&&!dormitoryStatus.equals("РїСЂРѕР¶РёРІР°РµС‚"));
 Case c=new Case(name,secondName,surname,faculty,group,dormitoryStatus);
-System.out.printf("Дело успешно добавлено в архив. Введите любой символ для продолжения.\n");
+System.out.printf("Р”РµР»Рѕ СѓСЃРїРµС€РЅРѕ РґРѕР±Р°РІР»РµРЅРѕ РІ Р°СЂС…РёРІ. Р’РІРµРґРёС‚Рµ Р»СЋР±РѕР№ СЃРёРјРІРѕР» РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ.\n");
 casesList.add(c);
 Collections.sort(casesList);
 writeCasesXml();
@@ -342,7 +342,7 @@ clear();
 public void casesViewer(){
 clear();
 if (casesList.size()==0){
-System.out.println("Архив пуст. Введите любой символ для продолжения.");
+System.out.println("РђСЂС…РёРІ РїСѓСЃС‚. Р’РІРµРґРёС‚Рµ Р»СЋР±РѕР№ СЃРёРјРІРѕР» РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ.");
 String s=in.next();
 mainMenu();
 return;	
@@ -358,7 +358,7 @@ casesViewerMenu();
 
 public void casesViewerMenu(){
 System.out.println("----------------");
-System.out.println("Выберите дело или вернитесь назад(0)");
+System.out.println("Р’С‹Р±РµСЂРёС‚Рµ РґРµР»Рѕ РёР»Рё РІРµСЂРЅРёС‚РµСЃСЊ РЅР°Р·Р°Рґ(0)");
 String choise="";	
 int choiseInt=0;
 boolean check=false;
@@ -378,17 +378,17 @@ if (choiseInt==0) {
 public void caseViewer(int number){
 	clear();
 Case c=casesList.get(number);
-System.out.printf("%-12s %s\n%-12s %s\n%-12s %s %s %s\n%-12s %s\n","Факультет:",c.getFaculty(),"Группа:",c.getGroup(),"ФИО:",c.getSurname(),c.getName(),c.getSecondName(),"Общежитие:",c.getDormitoryStatus());
+System.out.printf("%-12s %s\n%-12s %s\n%-12s %s %s %s\n%-12s %s\n","Р¤Р°РєСѓР»СЊС‚РµС‚:",c.getFaculty(),"Р“СЂСѓРїРїР°:",c.getGroup(),"Р¤РРћ:",c.getSurname(),c.getName(),c.getSecondName(),"РћР±С‰РµР¶РёС‚РёРµ:",c.getDormitoryStatus());
 System.out.println("--------");
-System.out.println("Вернуться в каталог(0)");
+System.out.println("Р’РµСЂРЅСѓС‚СЊСЃСЏ РІ РєР°С‚Р°Р»РѕРі(0)");
 if (currentUser.getAdmin().equals("true")){
-System.out.println("Удалить дело из архива(1)");
-System.out.println("Изменить факультет(2)");
-System.out.println("Изменить группу(3)");
-System.out.println("Изменить фамилию(4)");
-System.out.println("Изменить имя(5)");
-System.out.println("Изменить отчество(6)");
-System.out.println("Изменить статус общежития(7)");	
+System.out.println("РЈРґР°Р»РёС‚СЊ РґРµР»Рѕ РёР· Р°СЂС…РёРІР°(1)");
+System.out.println("РР·РјРµРЅРёС‚СЊ С„Р°РєСѓР»СЊС‚РµС‚(2)");
+System.out.println("РР·РјРµРЅРёС‚СЊ РіСЂСѓРїРїСѓ(3)");
+System.out.println("РР·РјРµРЅРёС‚СЊ С„Р°РјРёР»РёСЋ(4)");
+System.out.println("РР·РјРµРЅРёС‚СЊ РёРјСЏ(5)");
+System.out.println("РР·РјРµРЅРёС‚СЊ РѕС‚С‡РµСЃС‚РІРѕ(6)");
+System.out.println("РР·РјРµРЅРёС‚СЊ СЃС‚Р°С‚СѓСЃ РѕР±С‰РµР¶РёС‚РёСЏ(7)");	
 } 
 String choise=in.nextLine();
 switch(choise){
@@ -399,14 +399,14 @@ switch(choise){
 	if (currentUser.getAdmin().equals("true")){
 	casesList.remove(c);
 	writeCasesXml();
-	System.out.println("Дело удалено. Введите любой символ для продолжения.");
+	System.out.println("Р”РµР»Рѕ СѓРґР°Р»РµРЅРѕ. Р’РІРµРґРёС‚Рµ Р»СЋР±РѕР№ СЃРёРјРІРѕР» РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ.");
 	String title=in.nextLine();		
 	}
 	casesViewer();
 	break;
 	case "2":
 	if (currentUser.getAdmin().equals("true")){
-	System.out.println("Введите название факультета");
+	System.out.println("Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ С„Р°РєСѓР»СЊС‚РµС‚Р°");
 	String faculty=in.nextLine();
 	c.setFaculty(faculty);
 	writeCasesXml();	
@@ -415,7 +415,7 @@ switch(choise){
 	break;
 		case "3":
 	if (currentUser.getAdmin().equals("true")){
-	System.out.println("Введите номер группы");
+	System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РіСЂСѓРїРїС‹");
 	String group=in.nextLine();
 	c.setGroup(group);
 	writeCasesXml();	
@@ -424,7 +424,7 @@ switch(choise){
 	break;
 		case "4":
 	if (currentUser.getAdmin().equals("true")){
-	System.out.println("Введите фамилию");
+	System.out.println("Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ");
 	String surname=in.nextLine();
 	c.setSurname(surname);
 	writeCasesXml();	
@@ -433,7 +433,7 @@ switch(choise){
 	break;
 		case "5":
 	if (currentUser.getAdmin().equals("true")){
-	System.out.println("Введите имя");
+	System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ");
 	String name=in.nextLine();
 	c.setName(name);
 	writeCasesXml();	
@@ -442,7 +442,7 @@ switch(choise){
 	break;
 		case "6":
 	if (currentUser.getAdmin().equals("true")){
-	System.out.println("Введите отчество");
+	System.out.println("Р’РІРµРґРёС‚Рµ РѕС‚С‡РµСЃС‚РІРѕ");
 	String secondName=in.nextLine();
 	c.setSecondName(secondName);
 	writeCasesXml();	
@@ -451,11 +451,11 @@ switch(choise){
 	break;
 		case "7":
 	if (currentUser.getAdmin().equals("true")){
-	System.out.println("Введите статус общежития (нуждается/не нуждается/проживает)");
+	System.out.println("Р’РІРµРґРёС‚Рµ СЃС‚Р°С‚СѓСЃ РѕР±С‰РµР¶РёС‚РёСЏ (РЅСѓР¶РґР°РµС‚СЃСЏ/РЅРµ РЅСѓР¶РґР°РµС‚СЃСЏ/РїСЂРѕР¶РёРІР°РµС‚)");
 	String dormitoryStatus="";
 	do{
 	dormitoryStatus=in.nextLine();	
-	} while(!dormitoryStatus.equals("нуждается")&&!dormitoryStatus.equals("не нуждается")&&!dormitoryStatus.equals("проживает"));
+	} while(!dormitoryStatus.equals("РЅСѓР¶РґР°РµС‚СЃСЏ")&&!dormitoryStatus.equals("РЅРµ РЅСѓР¶РґР°РµС‚СЃСЏ")&&!dormitoryStatus.equals("РїСЂРѕР¶РёРІР°РµС‚"));
 	c.setDormitoryStatus(dormitoryStatus);
 	writeCasesXml();	
 	}

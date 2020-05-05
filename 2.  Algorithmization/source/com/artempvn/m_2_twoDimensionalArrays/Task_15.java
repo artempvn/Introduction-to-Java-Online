@@ -1,4 +1,4 @@
-//Найдите наибольший элемент матрицы и заменить все нечетные элементы на него.
+п»ї//РќР°Р№РґРёС‚Рµ РЅР°РёР±РѕР»СЊС€РёР№ СЌР»РµРјРµРЅС‚ РјР°С‚СЂРёС†С‹ Рё Р·Р°РјРµРЅРёС‚СЊ РІСЃРµ РЅРµС‡РµС‚РЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ РЅР° РЅРµРіРѕ.
 package com.artempvn.m_2_twoDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -44,9 +44,9 @@ public static int[][] function1(int[][] n){
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите количество строк  ");
+System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє  ");
 	int n=in.nextInt();
-	System.out.print("Введите количество столбцов  ");
+	System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ  ");
 	int m=in.nextInt();
 	int[][]a=massiveCreate2(n,m);
 	print(a);

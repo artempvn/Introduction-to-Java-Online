@@ -1,4 +1,4 @@
-//Отсотрировать стобцы матрицы по возрастанию и убыванию значений элементов.
+п»ї//СњС‚СЃРѕС‚СЂРёСЂРѕРІР°С‚СЊ СЃС‚РѕР±С†С‹ РјР°С‚СЂРёС†С‹ РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ Рё СѓР±С‹РІР°РЅРёСЋ Р·РЅР°С‡РµРЅРёР№ СЌР»РµРјРµРЅС‚РѕРІ.
 package com.artempvn.m_2_twoDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -78,9 +78,9 @@ for (int i=0; i<a.length;i++){
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите количество строк  ");
+System.out.print("В¬РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє  ");
 	int n=in.nextInt();
-	System.out.print("Введите количество столбцов  ");
+	System.out.print("В¬РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ  ");
 	int m=in.nextInt();
 	int[][]a=massiveCreate2(n,m);
 	print(a);

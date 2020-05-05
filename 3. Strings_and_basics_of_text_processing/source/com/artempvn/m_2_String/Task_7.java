@@ -1,5 +1,5 @@
-// Вводится строка. Требуется удалить из нее повторяющиеся символы и все пробелы. Например, если было введено "abc cde
-//def", то должно быть выведено "abcdef".
+п»ї// В¬РІРѕРґРёС‚СЃВ¤ СЃС‚СЂРѕРєР°. вЂњСЂРµР±СѓРµС‚СЃВ¤ СѓРґР°Р»РёС‚СЊ РёР· РЅРµРµ РїРѕРІС‚РѕСЂВ¤СЋС‰РёРµСЃВ¤ СЃРёРјРІРѕР»С‹ Рё РІСЃРµ РїСЂРѕР±РµР»С‹. РЊР°РїСЂРёРјРµСЂ, РµСЃР»Рё Р±С‹Р»Рѕ РІРІРµРґРµРЅРѕ "abc cde
+//def", С‚Рѕ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РІС‹РІРµРґРµРЅРѕ "abcdef".
 package com.artempvn.m_2_String;
 import java.util.Scanner;
 import java.util.*;
@@ -62,11 +62,11 @@ return a;
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите количество элементов строки:  ");
+System.out.print("В¬РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃС‚СЂРѕРєРё:  ");
 	int n=in.nextInt();
 	String a=massiveCreate(n);
 print(a);
-System.out.println("Измененная строка: ");
+System.out.println("В»Р·РјРµРЅРµРЅРЅР°В¤ СЃС‚СЂРѕРєР°: ");
 function(a);
 	}	
 }

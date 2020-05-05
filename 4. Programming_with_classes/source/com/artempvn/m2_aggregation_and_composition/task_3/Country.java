@@ -1,5 +1,5 @@
-// Создать объект класса Государство, используя классы Область, Район, Город. Методы: вывести на консоль 
-//столицу, количество областей, площадь, областные центры. 
+п»ї// РЎРѕР·РґР°С‚СЊ РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° Р“РѕСЃСѓРґР°СЂСЃС‚РІРѕ, РёСЃРїРѕР»СЊР·СѓСЏ РєР»Р°СЃСЃС‹ РћР±Р»Р°СЃС‚СЊ, Р Р°Р№РѕРЅ, Р“РѕСЂРѕРґ. РњРµС‚РѕРґС‹: РІС‹РІРµСЃС‚Рё РЅР° РєРѕРЅСЃРѕР»СЊ 
+//СЃС‚РѕР»РёС†Сѓ, РєРѕР»РёС‡РµСЃС‚РІРѕ РѕР±Р»Р°СЃС‚РµР№, РїР»РѕС‰Р°РґСЊ, РѕР±Р»Р°СЃС‚РЅС‹Рµ С†РµРЅС‚СЂС‹. 
 package com.artempvn.m2_aggregation_and_composition.task_3;
 import java.util.*;
 import static java.lang.Math.*;
@@ -32,16 +32,16 @@ capital=this.regions.get(0).getAreas().get(0).getCities().get(0);
 }
 
 public void printCapital(){
-	System.out.println("Столица: "+capital.getName());
+	System.out.println("РЎС‚РѕР»РёС†Р°: "+capital.getName());
 }
 public void countRegions(){
-	System.out.println("Количество областей: "+regions.size());
+	System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РѕР±Р»Р°СЃС‚РµР№: "+regions.size());
 }
 public void printSquare(){
-	System.out.printf("Площадь: %.2f \n",square);
+	System.out.printf("РџР»РѕС‰Р°РґСЊ: %.2f \n",square);
 }
 public void printCapitals(){
-	System.out.print("Областные центры: ");
+	System.out.print("РћР±Р»Р°СЃС‚РЅС‹Рµ С†РµРЅС‚СЂС‹: ");
 	for(Region r:regions){
 	System.out.print(r.getCapital().getName()+" ");
 	}
@@ -50,13 +50,13 @@ public void printCapitals(){
 
 
 public static void main (String [] args) {
-Area a1=new Area("Минский район",1902.66d,new City("Минск"),new City("Большевик"),new City("Жуковка"),new City("Зацень"));
-Area a2=new Area("Вилейский район",12453.81d,new City("Вилейка"),new City("Любань"));
-Region r1=new Region("Минская область",a1,a2);
-a1=new Area("Витебский район",2737.85d,new City("Витебск"),new City("Вороны"),new City("Сураж"),new City("Руба"));
-a2=new Area("Вилейский район",1707.7d,new City("Оршв"),new City("Лисуны"),new City("Копысь"),new City("Барань"));
-Region r2=new Region("Витебская область",a1,a2);
-Country c1=new Country("Белар",r1,r2);
+Area a1=new Area("РњРёРЅСЃРєРёР№ СЂР°Р№РѕРЅ",1902.66d,new City("РњРёРЅСЃРє"),new City("Р‘РѕР»СЊС€РµРІРёРє"),new City("Р–СѓРєРѕРІРєР°"),new City("Р—Р°С†РµРЅСЊ"));
+Area a2=new Area("Р’РёР»РµР№СЃРєРёР№ СЂР°Р№РѕРЅ",12453.81d,new City("Р’РёР»РµР№РєР°"),new City("Р›СЋР±Р°РЅСЊ"));
+Region r1=new Region("РњРёРЅСЃРєР°СЏ РѕР±Р»Р°СЃС‚СЊ",a1,a2);
+a1=new Area("Р’РёС‚РµР±СЃРєРёР№ СЂР°Р№РѕРЅ",2737.85d,new City("Р’РёС‚РµР±СЃРє"),new City("Р’РѕСЂРѕРЅС‹"),new City("РЎСѓСЂР°Р¶"),new City("Р СѓР±Р°"));
+a2=new Area("Р’РёР»РµР№СЃРєРёР№ СЂР°Р№РѕРЅ",1707.7d,new City("РћСЂС€РІ"),new City("Р›РёСЃСѓРЅС‹"),new City("РљРѕРїС‹СЃСЊ"),new City("Р‘Р°СЂР°РЅСЊ"));
+Region r2=new Region("Р’РёС‚РµР±СЃРєР°СЏ РѕР±Р»Р°СЃС‚СЊ",a1,a2);
+Country c1=new Country("Р‘РµР»Р°СЂ",r1,r2);
 
 c1.printCapital();
 c1.countRegions();

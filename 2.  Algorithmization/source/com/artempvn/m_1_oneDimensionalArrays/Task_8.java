@@ -1,5 +1,5 @@
-// Дана  последовательность  целых  чисел  а(1) ,а(2) ,..., а(n). 
-//Образовать  новую  последовательность,  выбросив  из исходной те члены, которые равны min(а(1) ,а(2) ,..., а(n))
+п»ї// Р”Р°РЅР°  РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ  С†РµР»С‹С…  С‡РёСЃРµР»  Р°(1) ,Р°(2) ,..., Р°(n). 
+//РћР±СЂР°Р·РѕРІР°С‚СЊ  РЅРѕРІСѓСЋ  РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ,  РІС‹Р±СЂРѕСЃРёРІ  РёР· РёСЃС…РѕРґРЅРѕР№ С‚Рµ С‡Р»РµРЅС‹, РєРѕС‚РѕСЂС‹Рµ СЂР°РІРЅС‹ min(Р°(1) ,Р°(2) ,..., Р°(n))
 package com.artempvn.m_1_oneDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -35,7 +35,7 @@ if(min>=n[i]) min=n[i];
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите N ");
+	System.out.print("Р’РІРµРґРёС‚Рµ N ");
 	int N=in.nextInt();
 	System.out.println();
 	int []A=massiveCreate(N);

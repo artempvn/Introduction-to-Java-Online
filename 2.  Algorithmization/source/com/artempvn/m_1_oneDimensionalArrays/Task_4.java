@@ -1,4 +1,4 @@
-//Даны действительные числа а1 ,а2 ,..., а(n) . Поменять местами наибольший и наименьший элементы.
+п»ї//Р”Р°РЅС‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹Рµ С‡РёСЃР»Р° Р°1 ,Р°2 ,..., Р°(n) . РџРѕРјРµРЅСЏС‚СЊ РјРµСЃС‚Р°РјРё РЅР°РёР±РѕР»СЊС€РёР№ Рё РЅР°РёРјРµРЅСЊС€РёР№ СЌР»РµРјРµРЅС‚С‹.
 package com.artempvn.m_1_oneDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -35,7 +35,7 @@ return n;
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите N ");
+	System.out.print("Р’РІРµРґРёС‚Рµ N ");
 	int N=in.nextInt();
 	System.out.println();
 	double []A=massiveCreate(N);

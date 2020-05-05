@@ -1,4 +1,4 @@
-//Даны два числа. Определить цифры, входящие в запись как первого так и второго числа.
+п»ї//Р”Р°РЅС‹ РґРІР° С‡РёСЃР»Р°. РћРїСЂРµРґРµР»РёС‚СЊ С†РёС„СЂС‹, РІС…РѕРґСЏС‰РёРµ РІ Р·Р°РїРёСЃСЊ РєР°Рє РїРµСЂРІРѕРіРѕ С‚Р°Рє Рё РІС‚РѕСЂРѕРіРѕ С‡РёСЃР»Р°.
 package com.artempvn.m_3_cycles;
 import java.util.Scanner;
 import java.math.*;
@@ -7,9 +7,9 @@ public class Task_8 {
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите m ");
+	System.out.print("Р’РІРµРґРёС‚Рµ m ");
 	int m=in.nextInt();
-	System.out.print("Введите n ");
+	System.out.print("Р’РІРµРґРёС‚Рµ n ");
 	int n=in.nextInt();
 	System.out.println();
 String ms=Integer.toString(m);

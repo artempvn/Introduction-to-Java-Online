@@ -1,4 +1,4 @@
-package com.artempvn.task_3.server;
+п»їpackage com.artempvn.task_3.server;
 import java.util.*;
 import java.io.*;
 import java.nio.file.*;
@@ -14,11 +14,11 @@ Files.createDirectories(Paths.get(path));
 	} catch (IOException e){e.printStackTrace();}
 try {
 Files.createFile(usersXml);
-	} catch (FileAlreadyExistsException ex){System.out.println("Обнаружен users.xml");}
+	} catch (FileAlreadyExistsException ex){System.out.println("СњР±РЅР°СЂСѓР¶РµРЅ users.xml");}
 	catch (Exception ex){ex.printStackTrace();}
 try {
 Files.createFile(casesXml);
-	} catch (FileAlreadyExistsException ex){System.out.println("Обнаружен cases.xml");}
+	} catch (FileAlreadyExistsException ex){System.out.println("СњР±РЅР°СЂСѓР¶РµРЅ cases.xml");}
 	catch (Exception ex){ex.printStackTrace();}	}
 
 

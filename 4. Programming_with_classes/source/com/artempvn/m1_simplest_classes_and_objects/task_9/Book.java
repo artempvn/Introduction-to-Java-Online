@@ -1,4 +1,4 @@
-package com.artempvn.m1_simplest_classes_and_objects.task_9;
+п»їpackage com.artempvn.m1_simplest_classes_and_objects.task_9;
 class Book {
 private int id;
 private String title;
@@ -80,7 +80,7 @@ public String getBinding(){
 	return binding;
 }
  public String toString() {
-        return "id: "+id+"; название: "+title+"; автор(ы): "+author+"; издательство: "+publisher+"; год издания: "+year+"; количество страниц: "+pages+"; цена: "+price+"; тип переплета: "+binding+"\n";
+        return "id: "+id+"; РЅР°Р·РІР°РЅРёРµ: "+title+"; Р°РІС‚РѕСЂ(С‹): "+author+"; РёР·РґР°С‚РµР»СЊСЃС‚РІРѕ: "+publisher+"; РіРѕРґ РёР·РґР°РЅРёСЏ: "+year+"; РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂР°РЅРёС†: "+pages+"; С†РµРЅР°: "+price+"; С‚РёРї РїРµСЂРµРїР»РµС‚Р°: "+binding+"\n";
     }
 }
 
