@@ -1,4 +1,4 @@
-//Написать метод(методы) для нахождения наибольшего общего делителя четырех натуральных чисел.
+п»ї//РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹) РґР»СЏ РЅР°С…РѕР¶РґРµРЅРёСЏ РЅР°РёР±РѕР»СЊС€РµРіРѕ РѕР±С‰РµРіРѕ РґРµР»РёС‚РµР»СЏ С‡РµС‚С‹СЂРµС… РЅР°С‚СѓСЂР°Р»СЊРЅС‹С… С‡РёСЃРµР».
 package com.artempvn.m_4_decomposition;
 import java.util.Scanner;
 import java.util.*;
@@ -95,16 +95,16 @@ return nod;
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите первое число:  ");
+System.out.print("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ:  ");
 	int n=in.nextInt();
-System.out.print("Введите второе число:  ");
+System.out.print("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ:  ");
 	int m=in.nextInt();
-	System.out.print("Введите третье число:  ");
+	System.out.print("Р’РІРµРґРёС‚Рµ С‚СЂРµС‚СЊРµ С‡РёСЃР»Рѕ:  ");
 	int k=in.nextInt();
-	System.out.print("Введите четвертое число:  ");
+	System.out.print("Р’РІРµРґРёС‚Рµ С‡РµС‚РІРµСЂС‚РѕРµ С‡РёСЃР»Рѕ:  ");
 	int l=in.nextInt();
 	int[]a=massiveCreate(n,m,k,l);
-System.out.println("НОД: "+function1(a));
+System.out.println("РќРћР”: "+function1(a));
 	}
 	
 }

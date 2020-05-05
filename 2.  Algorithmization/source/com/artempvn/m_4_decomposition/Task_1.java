@@ -1,5 +1,5 @@
-//Написать метод(методы) для нахождения наибольшего общего делителя и наименьшего общего кратного двух 
-//натуральных чисел
+п»ї//РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ(РјРµС‚РѕРґС‹) РґР»СЏ РЅР°С…РѕР¶РґРµРЅРёСЏ РЅР°РёР±РѕР»СЊС€РµРіРѕ РѕР±С‰РµРіРѕ РґРµР»РёС‚РµР»СЏ Рё РЅР°РёРјРµРЅСЊС€РµРіРѕ РѕР±С‰РµРіРѕ РєСЂР°С‚РЅРѕРіРѕ РґРІСѓС… 
+//РЅР°С‚СѓСЂР°Р»СЊРЅС‹С… С‡РёСЃРµР»
 package com.artempvn.m_4_decomposition;
 import java.util.Scanner;
 import java.util.*;
@@ -111,13 +111,13 @@ return nod;
 public static void main (String [] args) {
 	while (true){
 	Scanner in = new Scanner(System.in);
-System.out.print("Введите первое число:  ");
+System.out.print("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ:  ");
 	int n=in.nextInt();
-System.out.print("Введите второе число:  ");
+System.out.print("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ:  ");
 	int m=in.nextInt();
 	int[]a=massiveCreate(n,m);
-System.out.println("НОК: "+function(a));
-System.out.println("НОД: "+function1(a));
+System.out.println("РќРћРљ: "+function(a));
+System.out.println("РќРћР”: "+function1(a));
 	}
 	
 }
