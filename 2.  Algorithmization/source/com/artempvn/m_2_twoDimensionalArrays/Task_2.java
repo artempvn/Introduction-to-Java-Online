@@ -1,4 +1,4 @@
-//Дана квадратная матрица. Вывести на экран элементы, стоящие на диагонали.
+п»ї//Р”Р°РЅР° РєРІР°РґСЂР°С‚РЅР°СЏ РјР°С‚СЂРёС†Р°. Р’С‹РІРµСЃС‚Рё РЅР° СЌРєСЂР°РЅ СЌР»РµРјРµРЅС‚С‹, СЃС‚РѕСЏС‰РёРµ РЅР° РґРёР°РіРѕРЅР°Р»Рё.
 package com.artempvn.m_2_twoDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -30,7 +30,7 @@ public static void function(int[][] n){
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите количество строк и столбцов ");
+	System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє Рё СЃС‚РѕР»Р±С†РѕРІ ");
 	int n=in.nextInt();
 	System.out.println();
 	int [][]a=massiveCreate2(n,n);

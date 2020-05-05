@@ -1,4 +1,4 @@
-//Дана матрица. Вывести k-ю строку и p-й столбец матрицы.
+п»ї//Р”Р°РЅР° РјР°С‚СЂРёС†Р°. Р’С‹РІРµСЃС‚Рё k-СЋ СЃС‚СЂРѕРєСѓ Рё p-Р№ СЃС‚РѕР»Р±РµС† РјР°С‚СЂРёС†С‹.
 package com.artempvn.m_2_twoDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -38,17 +38,17 @@ public static void function(String s, int[][] n, int x){
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите количество строк ");
+	System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє ");
 	int n=in.nextInt();
-	System.out.print("Введите количество столбцов ");
+	System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ ");
 	int m=in.nextInt();
 	System.out.println();
 	int [][]a=massiveCreate2(n,m);
 	print(a);
-	System.out.print("Введите номер строки ");
+	System.out.print("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё ");
 	int k=in.nextInt();
 	function("row",a,k);
-	System.out.print("Введите номер столбца ");
+	System.out.print("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃС‚РѕР»Р±С†Р° ");
 	int p=in.nextInt();
 	function("column",a,k);
 	System.out.println();

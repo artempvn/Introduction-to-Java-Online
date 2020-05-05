@@ -1,4 +1,4 @@
-//Дана матрица. Вывести на экран все нечетные столбцы, у которых первый элемент больше последнего.
+п»ї//Р”Р°РЅР° РјР°С‚СЂРёС†Р°. Р’С‹РІРµСЃС‚Рё РЅР° СЌРєСЂР°РЅ РІСЃРµ РЅРµС‡РµС‚РЅС‹Рµ СЃС‚РѕР»Р±С†С‹, Сѓ РєРѕС‚РѕСЂС‹С… РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ Р±РѕР»СЊС€Рµ РїРѕСЃР»РµРґРЅРµРіРѕ.
 package com.artempvn.m_2_twoDimensionalArrays;
 import java.util.Scanner;
 import java.util.*;
@@ -35,9 +35,9 @@ public static void function(int[][] n){
 public static void main (String [] args) {
 	Scanner in = new Scanner(System.in);
 	while(true){
-	System.out.print("Введите количество строк ");
+	System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє ");
 	int n=in.nextInt();
-	System.out.print("Введите количество столбцов ");
+	System.out.print("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ ");
 	int m=in.nextInt();
 	System.out.println();
 	int [][]a=massiveCreate2(n,m);
