@@ -1,18 +1,18 @@
-/*создать консольное приложение “Учет книг в домашней библиотеке”.
-*Общие требования к заданию:
-•  Система учитывает книги как в электронном, так и в бумажном варианте.
-•  Существующие роли: пользователь, администратор.
-•  Пользователь может просматривать книги в каталоге книг, осуществлять поиск 
-книг в каталоге. 
-•  Администратор может модифицировать каталог.
-•  *При добавлении описания книги в каталог оповещение о ней рассылается на 
-e-mail всем пользователям
-•  **При просмотре каталога желательно реализовать постраничный просмотр
-•  ***Пользователь может предложить добавить книгу в библиотеку, переслав её 
-администратору на e-mail.
-•  Каталог книг хранится в текстовом файле.
-•  Данные аутентификации пользователей хранятся в текстовом файле. Пароль 
-*не хранится в открытом виде
+п»ї/*СЃРѕР·РґР°С‚СЊ РєРѕРЅСЃРѕР»СЊРЅРѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ вЂњРЈС‡РµС‚ РєРЅРёРі РІ РґРѕРјР°С€РЅРµР№ Р±РёР±Р»РёРѕС‚РµРєРµвЂќ.
+*РћР±С‰РёРµ С‚СЂРµР±РѕРІР°РЅРёСЏ Рє Р·Р°РґР°РЅРёСЋ:
+вЂў  РЎРёСЃС‚РµРјР° СѓС‡РёС‚С‹РІР°РµС‚ РєРЅРёРіРё РєР°Рє РІ СЌР»РµРєС‚СЂРѕРЅРЅРѕРј, С‚Р°Рє Рё РІ Р±СѓРјР°Р¶РЅРѕРј РІР°СЂРёР°РЅС‚Рµ.
+вЂў  РЎСѓС‰РµСЃС‚РІСѓСЋС‰РёРµ СЂРѕР»Рё: РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ, Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ.
+вЂў  РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ РјРѕР¶РµС‚ РїСЂРѕСЃРјР°С‚СЂРёРІР°С‚СЊ РєРЅРёРіРё РІ РєР°С‚Р°Р»РѕРіРµ РєРЅРёРі, РѕСЃСѓС‰РµСЃС‚РІР»СЏС‚СЊ РїРѕРёСЃРє 
+РєРЅРёРі РІ РєР°С‚Р°Р»РѕРіРµ. 
+вЂў  РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ РјРѕР¶РµС‚ РјРѕРґРёС„РёС†РёСЂРѕРІР°С‚СЊ РєР°С‚Р°Р»РѕРі.
+вЂў  *РџСЂРё РґРѕР±Р°РІР»РµРЅРёРё РѕРїРёСЃР°РЅРёСЏ РєРЅРёРіРё РІ РєР°С‚Р°Р»РѕРі РѕРїРѕРІРµС‰РµРЅРёРµ Рѕ РЅРµР№ СЂР°СЃСЃС‹Р»Р°РµС‚СЃСЏ РЅР° 
+e-mail РІСЃРµРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЏРј
+вЂў  **РџСЂРё РїСЂРѕСЃРјРѕС‚СЂРµ РєР°С‚Р°Р»РѕРіР° Р¶РµР»Р°С‚РµР»СЊРЅРѕ СЂРµР°Р»РёР·РѕРІР°С‚СЊ РїРѕСЃС‚СЂР°РЅРёС‡РЅС‹Р№ РїСЂРѕСЃРјРѕС‚СЂ
+вЂў  ***РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ РјРѕР¶РµС‚ РїСЂРµРґР»РѕР¶РёС‚СЊ РґРѕР±Р°РІРёС‚СЊ РєРЅРёРіСѓ РІ Р±РёР±Р»РёРѕС‚РµРєСѓ, РїРµСЂРµСЃР»Р°РІ РµС‘ 
+Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂСѓ РЅР° e-mail.
+вЂў  РљР°С‚Р°Р»РѕРі РєРЅРёРі С…СЂР°РЅРёС‚СЃСЏ РІ С‚РµРєСЃС‚РѕРІРѕРј С„Р°Р№Р»Рµ.
+вЂў  Р”Р°РЅРЅС‹Рµ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ С…СЂР°РЅСЏС‚СЃСЏ РІ С‚РµРєСЃС‚РѕРІРѕРј С„Р°Р№Р»Рµ. РџР°СЂРѕР»СЊ 
+*РЅРµ С…СЂР°РЅРёС‚СЃСЏ РІ РѕС‚РєСЂС‹С‚РѕРј РІРёРґРµ
 */
 package com.artempvn.task_1;
 import java.util.*;
@@ -51,7 +51,7 @@ for (String s:l){
 String[] user=s.split("/");
 usersList.add(new User(user[0],decoder(user[1]),user[2],user[3]));
 }
-	} catch (Exception ex) {System.err.println("Файл не найден");}
+	} catch (Exception ex) {System.err.println("Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ");}
 }
 
 public void writeUsers(){
@@ -65,11 +65,11 @@ writer.write(u.getLogin()+"/"+coder(u.getPassword())+"/"+u.getEmail()+"/"+u.getA
 writer.newLine();	
 }
 writer.close();
-	} catch (Exception ex) {System.err.println("Файл не найден");}
+	} catch (Exception ex) {System.err.println("Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ");}
 }
 
 public void addUser(String isAdmin){  
-System.out.println("Введите желаемый логин");
+System.out.println("Р’РІРµРґРёС‚Рµ Р¶РµР»Р°РµРјС‹Р№ Р»РѕРіРёРЅ");
 boolean incorrectLogin=false;
 String login=null;
 do {
@@ -77,19 +77,19 @@ incorrectLogin=false;
 login=in.next();
 for (User user:usersList){
 if(user.getLogin().equals(login)){
-	System.out.println("Такой пользователь уже создан. Введите другой логин");
+	System.out.println("РўР°РєРѕР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ СѓР¶Рµ СЃРѕР·РґР°РЅ. Р’РІРµРґРёС‚Рµ РґСЂСѓРіРѕР№ Р»РѕРіРёРЅ");
 	incorrectLogin=true;
 }
 }
 }while(incorrectLogin);
-System.out.println("Введите желаемый пароль");
+System.out.println("Р’РІРµРґРёС‚Рµ Р¶РµР»Р°РµРјС‹Р№ РїР°СЂРѕР»СЊ");
 String password=in.next();
-System.out.println("Введите вашу почту");
+System.out.println("Р’РІРµРґРёС‚Рµ РІР°С€Сѓ РїРѕС‡С‚Сѓ");
 String email=in.next();
 User u=new User(login,password,email,isAdmin);
 usersList.add(u);
 writeUsers();	
-System.out.printf("Пользователь %s успешно создан\n",login);
+System.out.printf("РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ %s СѓСЃРїРµС€РЅРѕ СЃРѕР·РґР°РЅ\n",login);
 }
 
 public void start(){
@@ -99,7 +99,7 @@ login();
 
 public void login(){
 clear();
-System.out.println("Учет книг в домашней библиотеке");
+System.out.println("РЈС‡РµС‚ РєРЅРёРі РІ РґРѕРјР°С€РЅРµР№ Р±РёР±Р»РёРѕС‚РµРєРµ");
 List<String> l=new ArrayList<String>();
 	String next="";
 	boolean findUser=false;
@@ -108,31 +108,31 @@ List<String> l=new ArrayList<String>();
 	do{
 try{
 l=Files.readAllLines(users);
-}catch (Exception ex) {System.err.println("Файл не найден");}
+}catch (Exception ex) {System.err.println("Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ");}
 	if (l.size()==0){
-	System.out.println("Создание нового администратора");
+	System.out.println("РЎРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°");
 	addUser("true");
 	}	
-	System.out.printf("1.Авторизация\n2.Создание нового пользователя\n");
+	System.out.printf("1.РђРІС‚РѕСЂРёР·Р°С†РёСЏ\n2.РЎРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ\n");
 	next=in.next();
 	}while (!next.equals("1")&&!next.equals("2"));
 	if (next.equals("1")){
-		System.out.printf("Введите логин\n");
+		System.out.printf("Р’РІРµРґРёС‚Рµ Р»РѕРіРёРЅ\n");
 		next=in.next();
 		for (User u:usersList){
 			if(u.getLogin().equals(next)) {
 				findUser=true;
-				System.out.printf("Введите пароль\n");
+				System.out.printf("Р’РІРµРґРёС‚Рµ РїР°СЂРѕР»СЊ\n");
 				next=in.next();
 				if(u.getPassword().equals(next)){
 				pass=true;
 				currentUser=u;
-				System.out.printf("Добро пожаловать\n");
+				System.out.printf("Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ\n");
                 break;				
-				} else System.out.printf("Введен неверный пароль\n");
+				} else System.out.printf("Р’РІРµРґРµРЅ РЅРµРІРµСЂРЅС‹Р№ РїР°СЂРѕР»СЊ\n");
 			}
 		}
-		if (!findUser) System.out.printf("Такого пользователя не существует\n");	
+		if (!findUser) System.out.printf("РўР°РєРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚\n");	
 	} else addUser("false");
 } while(!pass);
 clear();
@@ -146,7 +146,7 @@ for (String s:l){
 String[] book=s.split("/");
 catalogList.add(new Book(book[0],book[1],book[2]));
 }
-if(l.size()==0) System.out.println("Каталог пуст");
+if(l.size()==0) System.out.println("РљР°С‚Р°Р»РѕРі РїСѓСЃС‚");
 	} catch (Exception ex) {ex.printStackTrace();}
 }
 
@@ -161,35 +161,35 @@ writer.write(b.getInfo());
 writer.newLine();	
 }
 writer.close();
-	} catch (Exception ex) {System.err.println("Файл не найден");}
+	} catch (Exception ex) {System.err.println("Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ");}
 }
 
 public void addBook(){ 
 clear(); 
-System.out.println("Введите название");
+System.out.println("Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ");
 String title=in.nextLine();
 title=in.nextLine();
-System.out.println("Введите автора");
+System.out.println("Р’РІРµРґРёС‚Рµ Р°РІС‚РѕСЂР°");
 String author=in.nextLine();
 String type="";
 do{
-System.out.println("Введите тип (электронный/бумажный)");
+System.out.println("Р’РІРµРґРёС‚Рµ С‚РёРї (СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№/Р±СѓРјР°Р¶РЅС‹Р№)");
 type=in.next();
-}while (!type.equals("электронный")&&!type.equals("бумажный"));
+}while (!type.equals("СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№")&&!type.equals("Р±СѓРјР°Р¶РЅС‹Р№"));
 String choise="";
 String description="";
 do{
-System.out.println("Ввести описание сейчас?(да/нет)");
+System.out.println("Р’РІРµСЃС‚Рё РѕРїРёСЃР°РЅРёРµ СЃРµР№С‡Р°СЃ?(РґР°/РЅРµС‚)");
 choise=in.next();
-}while (!choise.equals("да")&&!choise.equals("нет"));
+}while (!choise.equals("РґР°")&&!choise.equals("РЅРµС‚"));
 Book b=null;
-if (choise.equals("да")){
-System.out.println("Введите описание");
+if (choise.equals("РґР°")){
+System.out.println("Р’РІРµРґРёС‚Рµ РѕРїРёСЃР°РЅРёРµ");
 description=in.nextLine();
 description=in.nextLine();	
 b=new Book(title,author,type,description);
 } else b=new Book(title,author,type);
-System.out.printf("Книга %s успешно добавлена в каталог. Введите любой символ для продолжения.\n",title);
+System.out.printf("РљРЅРёРіР° %s СѓСЃРїРµС€РЅРѕ РґРѕР±Р°РІР»РµРЅР° РІ РєР°С‚Р°Р»РѕРі. Р’РІРµРґРёС‚Рµ Р»СЋР±РѕР№ СЃРёРјРІРѕР» РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ.\n",title);
 catalogList.add(b);
 Collections.sort(catalogList);
 writeCatalog();
@@ -199,9 +199,9 @@ clear();
 
 public void mainMenu(){
 clear();
-System.out.println("1.Просмотр каталога книг");	
-System.out.println("2.Смена пользователя");	
-if (currentUser.getAdmin().equals("true"))System.out.println("3.Редактирование каталога");
+System.out.println("1.РџСЂРѕСЃРјРѕС‚СЂ РєР°С‚Р°Р»РѕРіР° РєРЅРёРі");	
+System.out.println("2.РЎРјРµРЅР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ");	
+if (currentUser.getAdmin().equals("true"))System.out.println("3.Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РєР°С‚Р°Р»РѕРіР°");
 int choise=in.nextInt();
 switch(choise){
 	case 1:
@@ -222,9 +222,9 @@ switch(choise){
 
 public void adminPanel(){
 clear();
-System.out.println("1.Добавление книги");	
-System.out.println("2.Добавление нового администратора");
-System.out.println("3.Предыдущее меню");
+System.out.println("1.Р”РѕР±Р°РІР»РµРЅРёРµ РєРЅРёРіРё");	
+System.out.println("2.Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°");
+System.out.println("3.РџСЂРµРґС‹РґСѓС‰РµРµ РјРµРЅСЋ");
 String choise=in.next();
 switch(choise){
 	case "1":
@@ -245,21 +245,21 @@ switch(choise){
 
 public void catalogMenu(){
 clear();
-System.out.println("1.Показать все книги");	
-System.out.println("2.Показать книги только в бумажном варианте");	
-System.out.println("3.Показать книги только в электронном варианте");
-System.out.println("4.Поиск книги");
-System.out.println("5.Предыдущее меню");	
+System.out.println("1.РџРѕРєР°Р·Р°С‚СЊ РІСЃРµ РєРЅРёРіРё");	
+System.out.println("2.РџРѕРєР°Р·Р°С‚СЊ РєРЅРёРіРё С‚РѕР»СЊРєРѕ РІ Р±СѓРјР°Р¶РЅРѕРј РІР°СЂРёР°РЅС‚Рµ");	
+System.out.println("3.РџРѕРєР°Р·Р°С‚СЊ РєРЅРёРіРё С‚РѕР»СЊРєРѕ РІ СЌР»РµРєС‚СЂРѕРЅРЅРѕРј РІР°СЂРёР°РЅС‚Рµ");
+System.out.println("4.РџРѕРёСЃРє РєРЅРёРіРё");
+System.out.println("5.РџСЂРµРґС‹РґСѓС‰РµРµ РјРµРЅСЋ");	
 String choise=in.next();
 switch(choise){
 	case "1":
 	catalogViewer("all");
 	break;
 	case "2":
-	catalogViewer("бумажный");
+	catalogViewer("Р±СѓРјР°Р¶РЅС‹Р№");
 	break;
 	case "3" :
-	catalogViewer("электронный");
+	catalogViewer("СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№");
 	case "4":
 	bookFinder();
 	break;
@@ -274,7 +274,7 @@ switch(choise){
 
 public void catalogViewerMenu(){
 System.out.println("----------------");
-System.out.println("Выберите книгу или вернитесь назад(0)");
+System.out.println("Р’С‹Р±РµСЂРёС‚Рµ РєРЅРёРіСѓ РёР»Рё РІРµСЂРЅРёС‚РµСЃСЊ РЅР°Р·Р°Рґ(0)");
 String choise="";	
 int choiseInt=0;
 boolean check=false;
@@ -304,7 +304,7 @@ for(Book b:catalogList)	{
 	}
 }
 if (bookList.size()==0){
-System.out.println("Книг не найдено. Введите любой символ для продолжения.");
+System.out.println("РљРЅРёРі РЅРµ РЅР°Р№РґРµРЅРѕ. Р’РІРµРґРёС‚Рµ Р»СЋР±РѕР№ СЃРёРјРІРѕР» РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ.");
 String s=in.next();
 catalogMenu();	
 } else catalogViewerMenu();
@@ -313,7 +313,7 @@ catalogMenu();
 public void bookFinder(){
 	clear();
 bookList=new ArrayList<Book>();
-System.out.println("Введите название или автора");
+System.out.println("Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РёР»Рё Р°РІС‚РѕСЂР°");
 String title=in.nextLine();
 title=in.nextLine();
 int count=1;
@@ -327,7 +327,7 @@ for(Book b:catalogList)	{
 	}
 }
 if(!find) {
-System.out.println("Данная книга не найдена. Введите любой символ для продолжения.");
+System.out.println("Р”Р°РЅРЅР°СЏ РєРЅРёРіР° РЅРµ РЅР°Р№РґРµРЅР°. Р’РІРµРґРёС‚Рµ Р»СЋР±РѕР№ СЃРёРјРІРѕР» РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ.");
 title=in.next();
 mainMenu();
 } else catalogViewerMenu();
@@ -338,8 +338,8 @@ public void bookViewer(int number){
 Book b=bookList.get(number);
 System.out.printf("%s\n%s\n%s\n%s\n",b.getTitle(),b.getAuthor(),b.getType(),b.getDescription());
 System.out.println("--------");
-System.out.println("Вернуться в каталог(0)");
-if (currentUser.getAdmin().equals("true")) System.out.println("Удалить книгу из каталога(1)");
+System.out.println("Р’РµСЂРЅСѓС‚СЊСЃСЏ РІ РєР°С‚Р°Р»РѕРі(0)");
+if (currentUser.getAdmin().equals("true")) System.out.println("РЈРґР°Р»РёС‚СЊ РєРЅРёРіСѓ РёР· РєР°С‚Р°Р»РѕРіР°(1)");
 String choise=in.next();
 switch(choise){
 	case "0":
@@ -361,7 +361,7 @@ public void delBook(int number){
 Book b=bookList.get(number);
 catalogList.remove(b);
 writeCatalog();
-System.out.println("Книга удалена из каталога. Введите любой символ для продолжения.");
+System.out.println("РљРЅРёРіР° СѓРґР°Р»РµРЅР° РёР· РєР°С‚Р°Р»РѕРіР°. Р’РІРµРґРёС‚Рµ Р»СЋР±РѕР№ СЃРёРјРІРѕР» РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ.");
 String title=in.next();	
 }
 
