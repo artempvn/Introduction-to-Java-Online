@@ -14,7 +14,6 @@ System.out.print("Input T: ");
 		int m=(T-h*3600)/60;
 		int s=T-h*3600-m*60;
     System.out.printf("%02dч %02dмин %02dс \n",h,m,s); 
-
 	}
 }
 }
